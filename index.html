@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Apostolic Pathway | Restoring the Church to Truth, Power and True Discipleship</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --deep: #111111;
+    --card: #161616;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --gold-dim: #8a6f30;
+    --white: #f5f0e8;
+    --white-dim: #c8c0b0;
+    --accent: #1a1a1a;
+    --border: rgba(201,168,76,0.25);
+    --glow: rgba(201,168,76,0.15);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'Crimson Pro',serif;
+    font-size:18px;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar{width:6px}
+  ::-webkit-scrollbar-track{background:var(--black)}
+  ::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:3px}
+
+  /* ===== NAV ===== */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 2rem;height:70px;
+    background:rgba(10,10,10,0.96);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(10px);
+  }
+  .logo{
+    display:flex;align-items:center;gap:12px;text-decoration:none;
+    font-family:'Cinzel Decorative',serif;
+    font-size:1.6rem;font-weight:900;color:var(--gold);
+    letter-spacing:2px;
+  }
+  .logo-cross{
+    width:32px;height:32px;position:relative;flex-shrink:0;
+  }
+  .logo-cross::before,.logo-cross::after{
+    content:'';position:absolute;background:var(--white);border-radius:2px;
+  }
+  .logo-cross::before{width:4px;height:100%;left:50%;transform:translateX(-50%)}
+  .logo-cross::after{width:100%;height:4px;top:30%;left:0}
+  .nav-links{
+    display:flex;align-items:center;gap:1.5rem;list-style:none;
+  }
+  .nav-links a{
+    color:var(--white-dim);text-decoration:none;font-family:'Cinzel',serif;
+    font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;
+    transition:color 0.3s;
+  }
+  .nav-links a:hover{color:var(--gold)}
+  .nav-right{display:flex;align-items:center;gap:1rem}
+  .lang-toggle{
+    background:transparent;border:1px solid var(--border);
+    color:var(--gold);font-family:'Cinzel',serif;font-size:0.7rem;
+    letter-spacing:1px;padding:6px 12px;cursor:pointer;
+    transition:all 0.3s;border-radius:2px;
+  }
+  .lang-toggle:hover{background:var(--gold);color:var(--black)}
+  .nav-cta{
+    background:var(--gold);color:var(--black);
+    font-family:'Cinzel',serif;font-size:0.7rem;font-weight:700;
+    letter-spacing:1.5px;text-transform:uppercase;
+    padding:8px 18px;border:none;cursor:pointer;
+    text-decoration:none;display:inline-block;
+    transition:all 0.3s;
+  }
+  .nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+  .hamburger span{width:24px;height:2px;background:var(--gold);transition:all 0.3s}
+  .mobile-menu{
+    display:none;position:fixed;top:70px;left:0;right:0;
+    background:rgba(10,10,10,0.99);border-bottom:1px solid var(--border);
+    padding:1.5rem 2rem;z-index:999;
+  }
+  .mobile-menu.open{display:block}
+  .mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+  .mobile-menu a{
+    color:var(--white-dim);text-decoration:none;font-family:'Cinzel',serif;
+    font-size:0.85rem;letter-spacing:1.5px;text-transform:uppercase;
+    display:block;padding:8px 0;border-bottom:1px solid var(--border);
+  }
+
+  /* ===== SECTIONS ===== */
+  section{padding:80px 0}
+  .container{max-width:1200px;margin:0 auto;padding:0 2rem}
+  .section-label{
+    font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:4px;
+    color:var(--gold);text-transform:uppercase;margin-bottom:1rem;
+    display:flex;align-items:center;gap:12px;
+  }
+  .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+  h1,h2,h3,h4{font-family:'Cinzel',serif;font-weight:700;line-height:1.2}
+  h2{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--white)}
+  h3{font-size:1.4rem;color:var(--gold)}
+  p{color:var(--white-dim)}
+
+  /* GOLD DIVIDER */
+  .gold-divider{
+    width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    margin:1.5rem 0;
+  }
+
+  /* ===== HERO ===== */
+  #home{
+    min-height:100vh;display:flex;align-items:center;
+    position:relative;overflow:hidden;padding-top:70px;
+  }
+  .hero-bg{
+    position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 80% 60% at 60% 40%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      linear-gradient(180deg, #0a0a0a 0%, #0f0c05 50%, #0a0a0a 100%);
+  }
+  .hero-grid{
+    position:absolute;inset:0;opacity:0.04;
+    background-image:
+      linear-gradient(var(--gold) 1px, transparent 1px),
+      linear-gradient(90deg, var(--gold) 1px, transparent 1px);
+    background-size:60px 60px;
+  }
+  .hero-content{
+    position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;
+  }
+  .hero-text{animation:fadeUp 1s ease both}
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid var(--border);padding:6px 16px;
+    font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:3px;
+    color:var(--gold);text-transform:uppercase;margin-bottom:2rem;
+  }
+  .hero-badge::before{content:'✦';font-size:8px}
+  h1.hero-title{
+    font-family:'Cinzel Decorative',serif;
+    font-size:clamp(2.2rem,5vw,4rem);
+    color:var(--white);line-height:1.1;margin-bottom:1rem;
+    text-shadow:0 0 60px rgba(201,168,76,0.2);
+  }
+  .hero-title span{color:var(--gold)}
+  .hero-tagline{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:clamp(1.1rem,2vw,1.5rem);color:var(--white-dim);
+    margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1rem;
+  }
+  .hero-verse{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:0.95rem;color:var(--gold-dim);margin-bottom:2.5rem;
+  }
+  .btn-group{display:flex;gap:1rem;flex-wrap:wrap}
+  .btn-primary{
+    background:var(--gold);color:var(--black);
+    font-family:'Cinzel',serif;font-size:0.75rem;font-weight:700;
+    letter-spacing:2px;text-transform:uppercase;
+    padding:14px 28px;border:none;cursor:pointer;text-decoration:none;
+    display:inline-block;transition:all 0.3s;
+  }
+  .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.3)}
+  .btn-outline{
+    background:transparent;color:var(--gold);
+    border:1px solid var(--gold);
+    font-family:'Cinzel',serif;font-size:0.75rem;font-weight:600;
+    letter-spacing:2px;text-transform:uppercase;
+    padding:14px 28px;cursor:pointer;text-decoration:none;
+    display:inline-block;transition:all 0.3s;
+  }
+  .btn-outline:hover{background:rgba(201,168,76,0.1);transform:translateY(-2px)}
+  .hero-image{
+    position:relative;animation:fadeUp 1s 0.3s ease both;
+  }
+  .hero-img-frame{
+    position:relative;border:1px solid var(--border);overflow:hidden;
+  }
+  .hero-img-frame::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,rgba(201,168,76,0.15) 0%,transparent 50%);
+    z-index:1;pointer-events:none;
+  }
+  .hero-img-frame img{width:100%;height:500px;object-fit:cover;display:block;filter:grayscale(20%) contrast(1.05)}
+  .hero-img-corner{
+    position:absolute;width:40px;height:40px;border-color:var(--gold);border-style:solid;
+  }
+  .hero-img-corner.tl{top:-8px;left:-8px;border-width:2px 0 0 2px}
+  .hero-img-corner.br{bottom:-8px;right:-8px;border-width:0 2px 2px 0}
+  .hero-stats{
+    display:flex;gap:2rem;margin-top:2rem;
+  }
+  .stat-item{text-align:center}
+  .stat-num{
+    font-family:'Cinzel',serif;font-size:1.8rem;font-weight:900;
+    color:var(--gold);display:block;
+  }
+  .stat-label{font-size:0.75rem;color:var(--white-dim);font-family:'Cinzel',serif;letter-spacing:1px}
+
+  /* ===== MARQUEE ===== */
+  .marquee-bar{
+    background:var(--gold);padding:12px 0;overflow:hidden;
+  }
+  .marquee-track{
+    display:flex;gap:3rem;animation:marquee 30s linear infinite;white-space:nowrap;
+  }
+  .marquee-item{
+    font-family:'Cinzel',serif;font-size:0.7rem;font-weight:700;
+    letter-spacing:3px;text-transform:uppercase;color:var(--black);
+    display:flex;align-items:center;gap:1rem;flex-shrink:0;
+  }
+  .marquee-item::after{content:'✦';font-size:8px;opacity:0.5}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ===== ABOUT ===== */
+  #about{background:var(--deep)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+  .about-image-stack{position:relative;height:500px}
+  .about-img-main{
+    position:absolute;top:0;left:0;width:75%;
+    border:1px solid var(--border);overflow:hidden;
+  }
+  .about-img-main img{width:100%;height:350px;object-fit:cover;display:block;filter:grayscale(15%)}
+  .about-img-secondary{
+    position:absolute;bottom:0;right:0;width:55%;
+    border:1px solid var(--gold);overflow:hidden;
+    box-shadow:0 0 40px rgba(201,168,76,0.15);
+  }
+  .about-img-secondary img{width:100%;height:220px;object-fit:cover;display:block}
+  .about-quote{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:1.3rem;color:var(--gold);
+    border-left:3px solid var(--gold);padding-left:1.5rem;
+    margin:2rem 0;line-height:1.6;
+  }
+  .mandate-list{list-style:none;display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem}
+  .mandate-list li{
+    display:flex;align-items:flex-start;gap:1rem;
+    padding:1rem;border:1px solid var(--border);
+    font-family:'Crimson Pro',serif;font-size:1rem;color:var(--white-dim);
+  }
+  .mandate-list li::before{
+    content:'✦';color:var(--gold);font-size:10px;margin-top:6px;flex-shrink:0;
+  }
+
+  /* ===== AUDIENCE CATEGORIES ===== */
+  #audience{background:var(--black)}
+  .audience-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2px;
+    margin-top:3rem;
+  }
+  .audience-card{
+    position:relative;overflow:hidden;cursor:pointer;
+    transition:transform 0.4s;
+  }
+  .audience-card:hover{z-index:10;transform:scale(1.02)}
+  .audience-card img{
+    width:100%;height:320px;object-fit:cover;display:block;
+    filter:grayscale(30%) brightness(0.6);transition:all 0.5s;
+  }
+  .audience-card:hover img{filter:grayscale(0%) brightness(0.5);transform:scale(1.05)}
+  .audience-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(0deg,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.2) 60%,transparent 100%);
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:1.5rem;transition:all 0.4s;
+  }
+  .audience-card:hover .audience-overlay{
+    background:linear-gradient(0deg,rgba(10,7,0,0.95) 0%,rgba(10,5,0,0.6) 60%,rgba(201,168,76,0.05) 100%);
+  }
+  .audience-label{
+    font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:3px;
+    color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;
+  }
+  .audience-title{
+    font-family:'Cinzel',serif;font-size:1.3rem;font-weight:700;
+    color:var(--white);margin-bottom:0.5rem;
+  }
+  .audience-problem{
+    font-size:0.9rem;color:var(--white-dim);
+    max-height:0;overflow:hidden;transition:max-height 0.4s;
+    font-family:'Crimson Pro',serif;
+  }
+  .audience-card:hover .audience-problem{max-height:100px}
+  .audience-btn{
+    margin-top:1rem;background:var(--gold);color:var(--black);
+    font-family:'Cinzel',serif;font-size:0.65rem;font-weight:700;
+    letter-spacing:1.5px;text-transform:uppercase;
+    padding:8px 16px;border:none;cursor:pointer;
+    opacity:0;transform:translateY(10px);transition:all 0.4s;
+    display:inline-block;
+  }
+  .audience-card:hover .audience-btn{opacity:1;transform:translateY(0)}
+  .gold-frame{
+    position:absolute;inset:12px;border:1px solid rgba(201,168,76,0);
+    pointer-events:none;transition:border-color 0.4s;
+  }
+  .audience-card:hover .gold-frame{border-color:rgba(201,168,76,0.4)}
+
+  /* ===== ASSESSMENT HUB ===== */
+  #assessment{background:var(--deep)}
+  .assessment-intro{text-align:center;max-width:700px;margin:0 auto 3rem}
+  .quiz-container{
+    background:var(--card);border:1px solid var(--border);
+    max-width:800px;margin:0 auto;padding:3rem;
+    position:relative;overflow:hidden;
+  }
+  .quiz-container::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+  .quiz-select-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;
+    margin-top:2rem;
+  }
+  .quiz-category-btn{
+    padding:1.2rem;border:1px solid var(--border);background:transparent;
+    color:var(--white-dim);font-family:'Cinzel',serif;font-size:0.75rem;
+    letter-spacing:1px;cursor:pointer;text-align:left;
+    transition:all 0.3s;display:flex;align-items:center;gap:0.8rem;
+  }
+  .quiz-category-btn:hover,.quiz-category-btn.active{
+    border-color:var(--gold);color:var(--gold);
+    background:rgba(201,168,76,0.05);
+  }
+  .quiz-category-btn .cat-icon{font-size:1.4rem}
+  .quiz-step{display:none}
+  .quiz-step.active{display:block}
+  .quiz-progress{
+    display:flex;align-items:center;gap:1rem;margin-bottom:2rem;
+  }
+  .progress-bar{
+    flex:1;height:3px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;
+  }
+  .progress-fill{
+    height:100%;background:var(--gold);
+    transition:width 0.4s ease;border-radius:2px;
+  }
+  .progress-text{
+    font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:2px;color:var(--gold);
+  }
+  .quiz-question{
+    font-family:'Cormorant Garamond',serif;font-size:1.35rem;
+    color:var(--white);margin-bottom:1.5rem;line-height:1.5;
+  }
+  .quiz-options{display:flex;flex-direction:column;gap:0.8rem}
+  .quiz-option{
+    padding:1rem 1.2rem;border:1px solid var(--border);
+    background:transparent;color:var(--white-dim);
+    font-family:'Crimson Pro',serif;font-size:1rem;
+    cursor:pointer;text-align:left;transition:all 0.2s;
+  }
+  .quiz-option:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.05)}
+  .quiz-option.selected{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.1)}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:2rem}
+  .btn-quiz-nav{
+    background:transparent;border:1px solid var(--border);
+    color:var(--white-dim);font-family:'Cinzel',serif;font-size:0.7rem;
+    letter-spacing:1.5px;padding:10px 20px;cursor:pointer;transition:all 0.3s;
+  }
+  .btn-quiz-nav:hover{border-color:var(--gold);color:var(--gold)}
+  .btn-quiz-nav.primary{background:var(--gold);color:var(--black);border-color:var(--gold)}
+  .btn-quiz-nav.primary:hover{background:var(--gold-light)}
+
+  /* RESULTS */
+  .quiz-result{display:none;animation:fadeUp 0.5s ease}
+  .quiz-result.visible{display:block}
+  .result-score-ring{
+    width:120px;height:120px;border-radius:50%;
+    border:3px solid var(--gold);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;margin:0 auto 2rem;
+    background:rgba(201,168,76,0.05);
+  }
+  .result-score{
+    font-family:'Cinzel',serif;font-size:2rem;font-weight:900;color:var(--gold);
+  }
+  .result-label{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:2px;color:var(--white-dim)}
+  .result-title{
+    font-family:'Cinzel',serif;font-size:1.5rem;color:var(--white);
+    text-align:center;margin-bottom:1rem;
+  }
+  .result-verse{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:1.1rem;color:var(--gold);text-align:center;
+    border:1px solid var(--border);padding:1.5rem;margin:1.5rem 0;
+  }
+  .result-steps{list-style:none;display:flex;flex-direction:column;gap:0.8rem;margin-top:1rem}
+  .result-steps li{
+    display:flex;align-items:flex-start;gap:1rem;
+    padding:0.8rem;background:rgba(201,168,76,0.05);
+    border-left:2px solid var(--gold);font-size:0.95rem;color:var(--white-dim);
+  }
+  .result-steps li::before{content:counter(step);counter-increment:step;
+    color:var(--gold);font-family:'Cinzel',serif;font-size:0.8rem;font-weight:700;flex-shrink:0}
+  .result-steps{counter-reset:step}
+
+  /* ===== TEACHINGS ===== */
+  #teachings{background:var(--black)}
+  .teachings-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:1.5rem;margin-top:3rem;
+  }
+  .teaching-card{
+    border:1px solid var(--border);padding:2rem;
+    background:var(--card);transition:all 0.3s;position:relative;overflow:hidden;
+  }
+  .teaching-card::after{
+    content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    transform:scaleX(0);transition:transform 0.3s;
+  }
+  .teaching-card:hover{border-color:var(--gold-dim);transform:translateY(-4px);
+    box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+  .teaching-card:hover::after{transform:scaleX(1)}
+  .teaching-icon{font-size:2rem;margin-bottom:1rem}
+  .teaching-tag{
+    font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:2px;
+    color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;
+  }
+  .teaching-title{
+    font-family:'Cinzel',serif;font-size:1.1rem;color:var(--white);
+    margin-bottom:0.8rem;line-height:1.4;
+  }
+  .teaching-desc{font-size:0.95rem;color:var(--white-dim);line-height:1.6}
+  .teaching-ref{
+    margin-top:1rem;font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:0.9rem;color:var(--gold-dim);
+  }
+
+  /* ===== COUNSELING ===== */
+  #counseling{
+    background:var(--deep);
+    position:relative;overflow:hidden;
+  }
+  #counseling::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(201,168,76,0.06) 0%,transparent 70%);
+  }
+  .counseling-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative}
+  .counseling-message{
+    background:var(--card);border:1px solid var(--border);padding:2.5rem;
+    position:relative;
+  }
+  .counseling-message::before{
+    content:'"';position:absolute;top:-20px;left:20px;
+    font-family:'Cinzel Decorative',serif;font-size:5rem;color:var(--gold);
+    line-height:1;opacity:0.3;
+  }
+  .contact-methods{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem}
+  .contact-card{
+    display:flex;align-items:center;gap:1.5rem;
+    padding:1.5rem;border:1px solid var(--border);
+    background:var(--card);transition:all 0.3s;text-decoration:none;
+  }
+  .contact-card:hover{border-color:var(--gold);transform:translateX(6px)}
+  .contact-icon{
+    width:50px;height:50px;background:rgba(201,168,76,0.1);
+    border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;
+    font-size:1.4rem;flex-shrink:0;
+  }
+  .contact-info-label{
+    font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:2px;
+    color:var(--gold);text-transform:uppercase;
+  }
+  .contact-info-value{
+    font-family:'Crimson Pro',serif;font-size:1.1rem;color:var(--white);margin-top:2px;
+  }
+  .counsel-cta-box{
+    background:var(--gold);color:var(--black);padding:2.5rem;text-align:center;
+    margin-top:2rem;
+  }
+  .counsel-cta-box h3{font-family:'Cinzel',serif;font-size:1.2rem;color:var(--black);margin-bottom:0.8rem}
+  .counsel-cta-box p{color:rgba(0,0,0,0.7);font-size:0.95rem;margin-bottom:1.5rem}
+  .btn-dark{
+    background:var(--black);color:var(--gold);
+    font-family:'Cinzel',serif;font-size:0.7rem;font-weight:700;
+    letter-spacing:2px;text-transform:uppercase;
+    padding:12px 24px;border:none;cursor:pointer;text-decoration:none;
+    display:inline-block;transition:all 0.3s;
+  }
+  .btn-dark:hover{background:#1a1a1a;transform:translateY(-2px)}
+
+  /* ===== SCRIPTURE STRIP ===== */
+  .scripture-strip{
+    background:var(--black);border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);padding:3rem 0;text-align:center;
+  }
+  .scripture-text{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:clamp(1.2rem,3vw,2rem);color:var(--white);
+    max-width:800px;margin:0 auto;line-height:1.6;
+  }
+  .scripture-ref{
+    font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:3px;
+    color:var(--gold);margin-top:1rem;display:block;
+  }
+
+  /* ===== LEADERSHIP ===== */
+  #leadership{background:var(--black)}
+  .leadership-hero{
+    display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:4rem;
+  }
+  .leader-img{
+    position:relative;border:1px solid var(--border);overflow:hidden;
+  }
+  .leader-img img{width:100%;height:400px;object-fit:cover;display:block;filter:grayscale(20%)}
+  .leader-img::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,rgba(201,168,76,0.1) 0%,transparent 60%);
+  }
+  .leadership-pillars{
+    display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem;
+  }
+  .pillar-card{
+    padding:2rem;border:1px solid var(--border);background:var(--card);
+    border-top:3px solid var(--gold);transition:all 0.3s;
+  }
+  .pillar-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,0.5)}
+  .pillar-num{
+    font-family:'Cinzel Decorative',serif;font-size:2.5rem;font-weight:900;
+    color:rgba(201,168,76,0.15);line-height:1;margin-bottom:0.5rem;
+  }
+  .pillar-title{font-family:'Cinzel',serif;font-size:0.9rem;color:var(--gold);margin-bottom:0.8rem;letter-spacing:1px}
+
+  /* ===== REVIVAL BANNER ===== */
+  .revival-banner{
+    background:var(--gold);padding:5rem 2rem;text-align:center;position:relative;overflow:hidden;
+  }
+  .revival-banner::before,.revival-banner::after{
+    content:'';position:absolute;
+    width:400px;height:400px;border-radius:50%;
+    background:rgba(255,255,255,0.05);
+  }
+  .revival-banner::before{top:-200px;left:-100px}
+  .revival-banner::after{bottom:-200px;right:-100px}
+  .revival-title{
+    font-family:'Cinzel Decorative',serif;font-size:clamp(2rem,5vw,3.5rem);
+    font-weight:900;color:var(--black);margin-bottom:1rem;position:relative;
+  }
+  .revival-sub{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:1.3rem;color:rgba(0,0,0,0.7);max-width:600px;margin:0 auto 2rem;position:relative;
+  }
+  .revival-banner .btn-dark{font-size:0.75rem;padding:14px 32px}
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:#050505;border-top:1px solid var(--border);padding:4rem 0 2rem;
+  }
+  .footer-grid{
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;
+  }
+  .footer-brand .logo{font-size:1.3rem;display:inline-flex;margin-bottom:1rem}
+  .footer-brand p{font-size:0.9rem;color:var(--white-dim);line-height:1.8}
+  .footer-col h4{
+    font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:2px;
+    color:var(--gold);text-transform:uppercase;margin-bottom:1.2rem;
+  }
+  .footer-links{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+  .footer-links a{
+    color:var(--white-dim);text-decoration:none;font-size:0.9rem;transition:color 0.3s;
+  }
+  .footer-links a:hover{color:var(--gold)}
+  .footer-bottom{
+    border-top:1px solid var(--border);padding-top:1.5rem;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .footer-bottom p{font-size:0.8rem;color:var(--white-dim)}
+  .footer-cross{
+    font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:2px;color:var(--gold);
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(30px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+  .reveal{opacity:0;transform:translateY(40px);transition:all 0.8s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+
+  /* ===== MODAL ===== */
+  .modal-overlay{
+    display:none;position:fixed;inset:0;
+    background:rgba(0,0,0,0.9);z-index:2000;
+    align-items:center;justify-content:center;padding:2rem;
+  }
+  .modal-overlay.open{display:flex}
+  .modal{
+    background:var(--deep);border:1px solid var(--border);
+    max-width:700px;width:100%;max-height:90vh;overflow-y:auto;
+    padding:2.5rem;position:relative;
+  }
+  .modal::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+  .modal-close{
+    position:absolute;top:1rem;right:1rem;background:transparent;
+    border:1px solid var(--border);color:var(--white-dim);
+    width:32px;height:32px;cursor:pointer;font-size:1rem;
+    display:flex;align-items:center;justify-content:center;transition:all 0.3s;
+  }
+  .modal-close:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* ===== SCROLL TO TOP ===== */
+  #scrollTop{
+    position:fixed;bottom:2rem;right:2rem;z-index:500;
+    width:44px;height:44px;background:var(--gold);color:var(--black);
+    border:none;cursor:pointer;font-size:1.2rem;
+    display:none;align-items:center;justify-content:center;
+    transition:all 0.3s;
+  }
+  #scrollTop:hover{background:var(--gold-light);transform:translateY(-3px)}
+  #scrollTop.visible{display:flex}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .hamburger{display:flex}
+    .hero-content{grid-template-columns:1fr;gap:2rem}
+    .hero-image{order:-1}
+    .hero-img-frame img{height:300px}
+    .about-grid{grid-template-columns:1fr}
+    .about-image-stack{height:300px;margin-bottom:2rem}
+    .counseling-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr 1fr}
+    .leadership-hero{grid-template-columns:1fr}
+    .leadership-pillars{grid-template-columns:1fr}
+    .hero-stats{gap:1rem}
+  }
+  @media(max-width:600px){
+    section{padding:60px 0}
+    .quiz-container{padding:1.5rem}
+    .footer-grid{grid-template-columns:1fr}
+    .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
+    .audience-grid{grid-template-columns:1fr}
+    h2{font-size:1.6rem}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="logo">
+    <div class="logo-cross"></div>
+    APW
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home" data-en="Home" data-fr="Accueil">Home</a></li>
+    <li><a href="#about" data-en="About" data-fr="À Propos">About</a></li>
+    <li><a href="#audience" data-en="Who We Serve" data-fr="Qui Nous Servons">Who We Serve</a></li>
+    <li><a href="#assessment" data-en="Assessment" data-fr="Évaluation">Assessment</a></li>
+    <li><a href="#teachings" data-en="Teachings" data-fr="Enseignements">Teachings</a></li>
+    <li><a href="#counseling" data-en="Counseling" data-fr="Counseling">Counseling</a></li>
+    <li><a href="#leadership" data-en="Leadership" data-fr="Leadership">Leadership</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle" onclick="toggleLang()">🇫🇷 Français</button>
+    <a href="#counseling" class="nav-cta" data-en="Get Help" data-fr="Obtenir de l'Aide">Get Help</a>
+    <div class="hamburger" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#home" onclick="closeMobile()" data-en="Home" data-fr="Accueil">Home</a></li>
+    <li><a href="#about" onclick="closeMobile()" data-en="About" data-fr="À Propos">About</a></li>
+    <li><a href="#audience" onclick="closeMobile()" data-en="Who We Serve" data-fr="Qui Nous Servons">Who We Serve</a></li>
+    <li><a href="#assessment" onclick="closeMobile()" data-en="Assessment" data-fr="Évaluation">Assessment</a></li>
+    <li><a href="#teachings" onclick="closeMobile()" data-en="Teachings" data-fr="Enseignements">Teachings</a></li>
+    <li><a href="#counseling" onclick="closeMobile()" data-en="Counseling" data-fr="Counseling">Counseling</a></li>
+    <li><a href="#leadership" onclick="closeMobile()" data-en="Leadership" data-fr="Leadership">Leadership</a></li>
+    <li><a href="tel:671187375" onclick="closeMobile()">📞 671 187 375</a></li>
+  </ul>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge" data-en="A Movement of Restoration" data-fr="Un Mouvement de Restauration">A Movement of Restoration</div>
+        <h1 class="hero-title">The Apostolic <span>Pathway</span></h1>
+        <p class="hero-tagline" data-en="Restoring the Church to Truth, Power and True Discipleship." data-fr="Restaurer l'Église à la Vérité, la Puissance et le Vrai Discipulat.">Restoring the Church to Truth, Power and True Discipleship.</p>
+        <p class="hero-verse">
+          "And he gave some, apostles; and some, prophets; and some, evangelists; and some, pastors and teachers; For the perfecting of the saints…" — Ephesians 4:11-12
+        </p>
+        <div class="btn-group">
+          <a href="#assessment" class="btn-primary" data-en="Start Your Assessment" data-fr="Commencer l'Évaluation">Start Your Assessment</a>
+          <a href="#counseling" class="btn-outline" data-en="Talk to a Counselor" data-fr="Parler à un Conseiller">Talk to a Counselor</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">7</span>
+            <span class="stat-label" data-en="Categories" data-fr="Catégories">Categories</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">105</span>
+            <span class="stat-label" data-en="Questions" data-fr="Questions">Questions</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">∞</span>
+            <span class="stat-label" data-en="Grace Available" data-fr="Grâce Disponible">Grace Available</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-img-frame">
+          <div class="hero-img-corner tl"></div>
+          <div class="hero-img-corner br"></div>
+          <img src="https://images.unsplash.com/photo-1583394293314-e4f6e735ab81?w=700&q=85&fit=crop&crop=faces" alt="African church congregation in worship" loading="eager">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track" id="marqueeTrack">
+    <span class="marquee-item" data-en="Truth" data-fr="Vérité">Truth</span>
+    <span class="marquee-item" data-en="Power" data-fr="Puissance">Power</span>
+    <span class="marquee-item" data-en="Discipleship" data-fr="Discipulat">Discipleship</span>
+    <span class="marquee-item" data-en="Restoration" data-fr="Restauration">Restoration</span>
+    <span class="marquee-item" data-en="Revival" data-fr="Réveil">Revival</span>
+    <span class="marquee-item" data-en="Apostolic Mandate" data-fr="Mandat Apostolique">Apostolic Mandate</span>
+    <span class="marquee-item" data-en="Holiness" data-fr="Sainteté">Holiness</span>
+    <span class="marquee-item" data-en="True Discipleship" data-fr="Vrai Discipulat">True Discipleship</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Truth</span>
+    <span class="marquee-item">Power</span>
+    <span class="marquee-item">Discipleship</span>
+    <span class="marquee-item">Restoration</span>
+    <span class="marquee-item">Revival</span>
+    <span class="marquee-item">Apostolic Mandate</span>
+    <span class="marquee-item">Holiness</span>
+    <span class="marquee-item">True Discipleship</span>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-stack reveal">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1531983412531-1f49a365ffed?w=600&q=85&fit=crop" alt="African pastor preaching">
+        </div>
+        <div class="about-img-secondary">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=85&fit=crop" alt="African church prayer meeting">
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="section-label" data-en="Our Mandate" data-fr="Notre Mandat">Our Mandate</div>
+        <h2 data-en="Restoring the Apostolic Foundation" data-fr="Restaurer le Fondement Apostolique">Restoring the Apostolic Foundation</h2>
+        <div class="gold-divider"></div>
+        <blockquote class="about-quote" data-en="The Church was not designed to be a social club — it was commissioned to transform nations." data-fr="L'Église n'a pas été conçue pour être un club social — elle a été mandatée pour transformer les nations.">
+          "The Church was not designed to be a social club — it was commissioned to transform nations."
+        </blockquote>
+        <p data-en="The Apostolic Pathway is a discipleship and restoration hub built for the African Church — addressing the crisis of shallow Christianity, spiritual decline, and the gap between church attendance and genuine transformation." data-fr="Le Chemin Apostolique est un centre de discipulat et de restauration construit pour l'Église africaine — abordant la crise du christianisme superficiel, le déclin spirituel et le fossé entre la fréquentation de l'église et la transformation véritable.">The Apostolic Pathway is a discipleship and restoration hub built for the African Church — addressing the crisis of shallow Christianity, spiritual decline, and the gap between church attendance and genuine transformation.</p>
+        <ul class="mandate-list">
+          <li data-en="Restore believers to apostolic doctrine and spiritual power" data-fr="Restaurer les croyants à la doctrine apostolique et à la puissance spirituelle">Restore believers to apostolic doctrine and spiritual power</li>
+          <li data-en="Build true disciples, not just church attendees" data-fr="Former de vrais disciples, pas seulement des fidèles">Build true disciples, not just church attendees</li>
+          <li data-en="Equip leaders with vision, direction and apostolic clarity" data-fr="Équiper les leaders avec vision, direction et clarté apostolique">Equip leaders with vision, direction and apostolic clarity</li>
+          <li data-en="Bring healing to the broken, backslidden and burned-out" data-fr="Apporter la guérison aux brisés, apostats et épuisés">Bring healing to the broken, backslidden and burned-out</li>
+          <li data-en="Ignite revival, holiness and purpose-driven Christian living" data-fr="Allumer le réveil, la sainteté et une vie chrétienne axée sur le but">Ignite revival, holiness and purpose-driven Christian living</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUDIENCE ===== -->
+<section id="audience">
+  <div class="container">
+    <div class="section-label reveal" data-en="Who We Serve" data-fr="Qui Nous Servons">Who We Serve</div>
+    <h2 class="reveal" data-en="Every Believer Has a Place Here" data-fr="Chaque Croyant a une Place Ici">Every Believer Has a Place Here</h2>
+    <p class="reveal" style="max-width:600px;margin-top:1rem" data-en="Whether you are a new convert finding your footing, a backslider seeking restoration, a pastor on the edge of burnout, or a youth searching for purpose — this pathway is for you." data-fr="Que vous soyez un nouveau converti cherchant ses marques, un apostat cherchant la restauration, un pasteur au bord de l'épuisement ou un jeune cherchant un but — ce chemin est pour vous.">Whether you are a new convert finding your footing, a backslider seeking restoration, a pastor on the edge of burnout, or a youth searching for purpose — this pathway is for you.</p>
+  </div>
+  <div class="audience-grid">
+    <!-- New Converts -->
+    <div class="audience-card reveal" onclick="openAssessment('converts')">
+      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600&q=80&fit=crop&crop=faces" alt="Young African new converts" loading="lazy">
+      <div class="gold-frame"></div>
+      <div class="audience-overlay">
+        <div class="audience-label" data-en="Category 01" data-fr="Catégorie 01">Category 01</div>
+        <div class="audience-title" data-en="New Converts" data-fr="Nouveaux Convertis">New Converts</div>
+        <p class="audience-problem" data-en="Lack of follow-up, weak foundation, confusion after first steps of faith." data-fr="Manque de suivi, fondement faible, confusion après les premiers pas de la foi.">Lack of follow-up, weak foundation, confusion after first steps of faith.</p>
+        <button class="audience-btn" data-en="Take Assessment →" data-fr="Passer l'Évaluation →">Take Assessment →</button>
+      </div>
+    </div>
+    <!-- Backsliders -->
+    <div class="audience-card reveal" onclick="openAssessment('backsliders')">
+      <img src="https://images.unsplash.com/photo-1474978528675-4a50a4508dc6?w=600&q=80&fit=crop&crop=faces" alt="African man in need of restoration" loading="lazy">
+      <div class="gold-frame"></div>
+      <div class="audience-overlay">
+        <div class="audience-label" data-en="Category 02" data-fr="Catégorie 02">Category 02</div>
+        <div class="audience-title" data-en="Backsliders" data-fr="Apostats">Backsliders</div>
+        <p class="audience-problem" data-en="Church hurt, offense, isolation, loss of faith and spiritual passion." data-fr="Blessures d'église, offense, isolement, perte de foi et de passion spirituelle.">Church hurt, offense, isolation, loss of faith and spiritual passion.</p>
+        <button class="audience-btn" data-en="Take Assessment →" data-fr="Passer l'Évaluation →">Take Assessment →</button>
+      </div>
+    </div>
+    <!-- Church Workers -->
+    <div class="audience-card reveal" onclick="openAssessment('workers')">
+      <img src="https://images.unsplash.com/photo-1551009175-15bdf9dcb580?w=600&q=80&fit=crop&crop=faces" alt="African church workers serving" loading="lazy">
+      <div class="gold-frame"></div>
+      <div class="audience-overlay">
+        <div class="audience-label" data-en="Category 03" data-fr="Catégorie 03">Category 03</div>
+        <div class="audience-title" data-en="Church Workers" data-fr="Travailleurs d'Église">Church Workers</div>
+        <p class="audience-problem" data-en="Lukewarm service, competition, performing for people rather than God." data-fr="Service tiède, compétition, servir les gens plutôt que Dieu.">Lukewarm service, competition, performing for people rather than God.</p>
+        <button class="audience-btn" data-en="Take Assessment →" data-fr="Passer l'Évaluation →">Take Assessment →</button>
+      </div>
+    </div>
+    <!-- Church Leaders -->
+    <div class="audience-card reveal" onclick="openAssessment('leaders')">
+      <img src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=600&q=80&fit=crop&crop=faces" alt="African church leader" loading="lazy">
+      <div class="gold-frame"></div>
+      <div class="audience-overlay">
+        <div class="audience-label" data-en="Category 04" data-fr="Catégorie 04">Category 04</div>
+        <div class="audience-title" data-en="Church Leaders" data-fr="Dirigeants d'Église">Church Leaders</div>
+        <p class="audience-problem" data-en="Misalignment with vision, lack of direction, operating without apostolic clarity." data-fr="Désalignement avec la vision, manque de direction, opérant sans clarté apostolique.">Misalignment with vision, lack of direction, operating without apostolic clarity.</p>
+        <button class="audience-btn" data-en="Take Assessment →" data-fr="Passer l'Évaluation →">Take Assessment →</button>
+      </div>
+    </div>
+    <!-- Pastors -->
+    <div class="audience-card reveal" onclick="openAssessment('pastors')">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&fit=crop&crop=faces" alt="African pastor" loading="lazy">
+      <div class="gold-frame"></div>
+      <div class="audience-overlay">
+        <div class="audience-label" data-en="Category 05" data-fr="Catégorie 05">Category 05</div>
+        <div class="audience-title" data-en="Pastors" data-fr="Pasteurs">Pastors</div>
+        <p class="audience-problem" data-en="Weariness, burnout, doing church activities instead of raising true disciples." data-fr="Lassitude, épuisement, faire des activités d'église au lieu d'élever de vrais disciples.">Weariness, burnout, doing church activities instead of raising true disciples.</p>
+        <button class="audience-btn" data-en="Take Assessment →" data-fr="Passer l'Évaluation →">Take Assessment →</button>
+      </div>
+    </div>
+    <!-- Youths -->
+    <div class="audience-card reveal" onclick="openAssessment('youths')">
+      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80&fit=crop&crop=faces" alt="African Christian youths" loading="lazy">
+      <div class="gold-frame"></div>
+      <div class="audience-overlay">
+        <div class="audience-label" data-en="Category 06" data-fr="Catégorie 06">Category 06</div>
+        <div class="audience-title" data-en="Youths" data-fr="Jeunes">Youths</div>
+        <p class="audience-problem" data-en="Not being mentored, disconnected from the Church's mission and purpose." data-fr="Pas encadrés, déconnectés de la mission et du but de l'Église.">Not being mentored, disconnected from the Church's mission and purpose.</p>
+        <button class="audience-btn" data-en="Take Assessment →" data-fr="Passer l'Évaluation →">Take Assessment →</button>
+      </div>
+    </div>
+    <!-- The Church at Large -->
+    <div class="audience-card reveal" onclick="openAssessment('church')" style="grid-column:1/-1;max-height:350px">
+      <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=1200&q=80&fit=crop" alt="African church congregation" loading="lazy" style="height:350px">
+      <div class="gold-frame"></div>
+      <div class="audience-overlay">
+        <div class="audience-label" data-en="Category 07" data-fr="Catégorie 07">Category 07</div>
+        <div class="audience-title" style="font-size:1.8rem" data-en="The Church at Large" data-fr="L'Église en Général">The Church at Large</div>
+        <p class="audience-problem" data-en="Activity without impact — programs without transformation. The Church must return to its apostolic mandate." data-fr="Activité sans impact — programmes sans transformation. L'Église doit retourner à son mandat apostolique.">Activity without impact — programs without transformation. The Church must return to its apostolic mandate.</p>
+        <button class="audience-btn" data-en="Take Assessment →" data-fr="Passer l'Évaluation →">Take Assessment →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCRIPTURE STRIP ===== -->
+<div class="scripture-strip">
+  <div class="container">
+    <p class="scripture-text" data-en='"Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you."' data-fr='"Allez, faites de toutes les nations des disciples, les baptisant au nom du Père, du Fils et du Saint-Esprit, et enseignez-leur à observer tout ce que je vous ai prescrit."'>"Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you."</p>
+    <span class="scripture-ref">Matthew 28:19-20 | ESV</span>
+  </div>
+</div>
+
+<!-- ===== ASSESSMENT ===== -->
+<section id="assessment">
+  <div class="container">
+    <div class="assessment-intro reveal">
+      <div class="section-label" data-en="Diagnostic Tool" data-fr="Outil Diagnostique">Diagnostic Tool</div>
+      <h2 data-en="Spiritual Condition Assessment" data-fr="Évaluation de la Condition Spirituelle">Spiritual Condition Assessment</h2>
+      <div class="gold-divider" style="margin:1.5rem auto"></div>
+      <p data-en="Answer 15 honest questions to receive a personalized spiritual assessment, biblical solutions, and your next steps in God." data-fr="Répondez à 15 questions honnêtes pour recevoir une évaluation spirituelle personnalisée, des solutions bibliques et vos prochaines étapes en Dieu.">Answer 15 honest questions to receive a personalized spiritual assessment, biblical solutions, and your next steps in God.</p>
+    </div>
+
+    <div class="quiz-container reveal">
+      <!-- Step 0: Category Selection -->
+      <div class="quiz-step active" id="step-select">
+        <h3 style="margin-bottom:0.5rem" data-en="Who Are You?" data-fr="Qui Êtes-Vous?">Who Are You?</h3>
+        <p style="font-size:0.95rem" data-en="Select the category that best describes your current situation." data-fr="Sélectionnez la catégorie qui décrit le mieux votre situation actuelle.">Select the category that best describes your current situation.</p>
+        <div class="quiz-select-grid">
+          <button class="quiz-category-btn" onclick="startQuiz('converts')"><span class="cat-icon">🌱</span><span data-en="New Convert" data-fr="Nouveau Converti">New Convert</span></button>
+          <button class="quiz-category-btn" onclick="startQuiz('backsliders')"><span class="cat-icon">🕊️</span><span data-en="Backslider" data-fr="Apostat">Backslider</span></button>
+          <button class="quiz-category-btn" onclick="startQuiz('workers')"><span class="cat-icon">🙌</span><span data-en="Church Worker" data-fr="Travailleur d'Église">Church Worker</span></button>
+          <button class="quiz-category-btn" onclick="startQuiz('leaders')"><span class="cat-icon">👑</span><span data-en="Church Leader" data-fr="Dirigeant d'Église">Church Leader</span></button>
+          <button class="quiz-category-btn" onclick="startQuiz('pastors')"><span class="cat-icon">⛪</span><span data-en="Pastor" data-fr="Pasteur">Pastor</span></button>
+          <button class="quiz-category-btn" onclick="startQuiz('youths')"><span class="cat-icon">🔥</span><span data-en="Youth" data-fr="Jeune">Youth</span></button>
+          <button class="quiz-category-btn" onclick="startQuiz('church')" style="grid-column:1/-1"><span class="cat-icon">✝️</span><span data-en="The Church at Large" data-fr="L'Église en Général">The Church at Large</span></button>
+        </div>
+      </div>
+
+      <!-- Step 1: Quiz -->
+      <div class="quiz-step" id="step-quiz">
+        <div class="quiz-progress">
+          <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+          <span class="progress-text" id="progressText">1 / 15</span>
+        </div>
+        <div class="quiz-question" id="quizQuestion">Loading question...</div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <div class="quiz-nav">
+          <button class="btn-quiz-nav" onclick="prevQuestion()" id="btnPrev" data-en="← Previous" data-fr="← Précédent">← Previous</button>
+          <button class="btn-quiz-nav primary" onclick="nextQuestion()" id="btnNext" data-en="Next →" data-fr="Suivant →">Next →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Results -->
+      <div class="quiz-step" id="step-result">
+        <div class="quiz-result visible">
+          <div class="result-score-ring">
+            <span class="result-score" id="resultScore">0</span>
+            <span class="result-label">SCORE</span>
+          </div>
+          <h3 class="result-title" id="resultTitle">Your Spiritual Assessment</h3>
+          <p style="text-align:center;color:var(--white-dim);font-size:1rem" id="resultSummary"></p>
+          <blockquote class="result-verse" id="resultVerse"></blockquote>
+          <h4 style="font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:2px;color:var(--gold);margin:1.5rem 0 1rem" data-en="YOUR NEXT STEPS" data-fr="VOS PROCHAINES ÉTAPES">YOUR NEXT STEPS</h4>
+          <ol class="result-steps" id="resultSteps"></ol>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;justify-content:center">
+            <button class="btn-primary" onclick="resetQuiz()" data-en="Take Another Assessment" data-fr="Passer une Autre Évaluation">Take Another Assessment</button>
+            <a href="#counseling" class="btn-outline" data-en="Talk to a Counselor" data-fr="Parler à un Conseiller">Talk to a Counselor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEACHINGS ===== -->
+<section id="teachings">
+  <div class="container">
+    <div class="section-label reveal" data-en="Resources" data-fr="Ressources">Resources</div>
+    <h2 class="reveal" data-en="Teachings & Discipleship Resources" data-fr="Enseignements & Ressources de Discipulat">Teachings & Discipleship Resources</h2>
+    <div class="gold-divider reveal"></div>
+    <div class="teachings-grid">
+      <div class="teaching-card reveal">
+        <div class="teaching-icon">📖</div>
+        <div class="teaching-tag" data-en="Foundation" data-fr="Fondement">Foundation</div>
+        <h3 class="teaching-title" data-en="The Apostolic Doctrine: What It Means and Why It Matters" data-fr="La Doctrine Apostolique: Ce que Cela Signifie">The Apostolic Doctrine: What It Means and Why It Matters</h3>
+        <p class="teaching-desc" data-en="A comprehensive guide to understanding the core tenets of apostolic Christianity and how they apply to modern church life in Africa." data-fr="Un guide complet pour comprendre les principes fondamentaux du christianisme apostolique.">A comprehensive guide to understanding the core tenets of apostolic Christianity and how they apply to modern church life in Africa.</p>
+        <p class="teaching-ref">Acts 2:42 | Ephesians 2:20</p>
+      </div>
+      <div class="teaching-card reveal">
+        <div class="teaching-icon">🔥</div>
+        <div class="teaching-tag" data-en="Revival" data-fr="Réveil">Revival</div>
+        <h3 class="teaching-title" data-en="Why the African Church Needs a New Pentecost" data-fr="Pourquoi l'Église Africaine a Besoin d'un Nouveau Pentecôte">Why the African Church Needs a New Pentecost</h3>
+        <p class="teaching-desc" data-en="Examining the spiritual state of the modern African church and the conditions necessary for authentic Holy Spirit revival." data-fr="Examiner l'état spirituel de l'église africaine moderne et les conditions nécessaires au réveil.">Examining the spiritual state of the modern African church and the conditions necessary for authentic Holy Spirit revival.</p>
+        <p class="teaching-ref">Acts 1:8 | Joel 2:28</p>
+      </div>
+      <div class="teaching-card reveal">
+        <div class="teaching-icon">🙏</div>
+        <div class="teaching-tag" data-en="Discipleship" data-fr="Discipulat">Discipleship</div>
+        <h3 class="teaching-title" data-en="From Attendance to Transformation: Building Real Disciples" data-fr="De la Fréquentation à la Transformation">From Attendance to Transformation: Building Real Disciples</h3>
+        <p class="teaching-desc" data-en="A practical discipleship system for churches who want to move beyond Sunday services to genuine life transformation." data-fr="Un système pratique de discipulat pour les églises qui veulent aller au-delà des services du dimanche.">A practical discipleship system for churches who want to move beyond Sunday services to genuine life transformation.</p>
+        <p class="teaching-ref">Matthew 28:19 | 2 Timothy 2:2</p>
+      </div>
+      <div class="teaching-card reveal">
+        <div class="teaching-icon">💔</div>
+        <div class="teaching-tag" data-en="Restoration" data-fr="Restauration">Restoration</div>
+        <h3 class="teaching-title" data-en="Healing the Church-Hurt: A Path Back to God" data-fr="Guérir les Blessures d'Église: Un Chemin de Retour">Healing the Church-Hurt: A Path Back to God</h3>
+        <p class="teaching-desc" data-en="Addressing the growing epidemic of believers wounded by church experiences, and charting a biblical path to healing and return." data-fr="Aborder l'épidémie croissante de croyants blessés par des expériences d'église.">Addressing the growing epidemic of believers wounded by church experiences, and charting a biblical path to healing and return.</p>
+        <p class="teaching-ref">Psalm 147:3 | Luke 15:20</p>
+      </div>
+      <div class="teaching-card reveal">
+        <div class="teaching-icon">👑</div>
+        <div class="teaching-tag" data-en="Leadership" data-fr="Leadership">Leadership</div>
+        <h3 class="teaching-title" data-en="Servant Leadership vs. Positional Authority: The Jesus Model" data-fr="Leadership Serviteur vs. Autorité Positionnelle">Servant Leadership vs. Positional Authority: The Jesus Model</h3>
+        <p class="teaching-desc" data-en="A deep dive into Christ's model of leadership — and why the Church in Africa must abandon hierarchy for servant-hearted ministry." data-fr="Une plongée profonde dans le modèle de leadership du Christ et pourquoi l'Église en Afrique doit l'adopter.">A deep dive into Christ's model of leadership — and why the Church in Africa must abandon hierarchy for servant-hearted ministry.</p>
+        <p class="teaching-ref">Mark 10:43-45 | John 13:14</p>
+      </div>
+      <div class="teaching-card reveal">
+        <div class="teaching-icon">⚡</div>
+        <div class="teaching-tag" data-en="Youth" data-fr="Jeunes">Youth</div>
+        <h3 class="teaching-title" data-en="Raising the Next Generation: Mentorship in the African Church" data-fr="Élever la Prochaine Génération: Le Mentorat">Raising the Next Generation: Mentorship in the African Church</h3>
+        <p class="teaching-desc" data-en="A call to intentional mentorship of African youth — to see them become the backbone of the Church they are destined to be." data-fr="Un appel au mentorat intentionnel des jeunes africains — pour les voir devenir l'épine dorsale de l'Église.">A call to intentional mentorship of African youth — to see them become the backbone of the Church they are destined to be.</p>
+        <p class="teaching-ref">Titus 2:1-8 | Proverbs 22:6</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COUNSELING ===== -->
+<section id="counseling">
+  <div class="container">
+    <div class="counseling-grid">
+      <div>
+        <div class="section-label reveal" data-en="Get Help Today" data-fr="Obtenir de l'Aide Aujourd'hui">Get Help Today</div>
+        <h2 class="reveal" data-en="You Are Not Alone. Reach Out Now." data-fr="Vous N'êtes Pas Seul. Contactez-Nous.">You Are Not Alone. Reach Out Now.</h2>
+        <div class="gold-divider reveal"></div>
+        <div class="counseling-message reveal">
+          <p style="position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--white-dim);line-height:1.8" data-en="Whether you are struggling in your faith, hurting from a church experience, battling sin, or simply lost and confused — there is grace for you here. A trained Christian counselor is ready to walk this road with you. Do not walk alone." data-fr="Que vous luttiez dans votre foi, blessé par une expérience d'église, en lutte contre le péché, ou simplement perdu et confus — il y a de la grâce pour vous ici. Un conseiller chrétien formé est prêt à marcher ce chemin avec vous.">Whether you are struggling in your faith, hurting from a church experience, battling sin, or simply lost and confused — there is grace for you here. A trained Christian counselor is ready to walk this road with you. Do not walk alone.</p>
+        </div>
+        <div class="contact-methods reveal">
+          <a href="tel:671187375" class="contact-card">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-info-label" data-en="Call Us Directly" data-fr="Appelez-Nous Directement">Call Us Directly</div>
+              <div class="contact-info-value">671 187 375</div>
+            </div>
+          </a>
+          <a href="mailto:lukongchrysantus7@gmail.com" class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-info-label" data-en="Send an Email" data-fr="Envoyer un Email">Send an Email</div>
+              <div class="contact-info-value">lukongchrysantus7@gmail.com</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="reveal">
+        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600&q=85&fit=crop&crop=faces" alt="Compassionate counseling conversation" style="width:100%;height:280px;object-fit:cover;border:1px solid var(--border);display:block;filter:grayscale(20%);margin-bottom:2rem">
+        <div class="counsel-cta-box">
+          <h3 data-en="Ready to Talk?" data-fr="Prêt à Parler?">Ready to Talk?</h3>
+          <p data-en="Our counselors are available to listen, pray, and guide you through whatever challenge you are facing in your walk with God." data-fr="Nos conseillers sont disponibles pour écouter, prier et vous guider à travers tout défi que vous affrontez dans votre marche avec Dieu.">Our counselors are available to listen, pray, and guide you through whatever challenge you are facing in your walk with God.</p>
+          <a href="tel:671187375" class="btn-dark" data-en="Call Now — Free" data-fr="Appelez Maintenant — Gratuit">Call Now — Free</a>
+        </div>
+        <p style="text-align:center;margin-top:1rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--gold-dim)">
+          "Cast all your anxiety on him because he cares for you." — 1 Peter 5:7
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEADERSHIP ===== -->
+<section id="leadership">
+  <div class="container">
+    <div class="section-label reveal" data-en="For Leaders & Pastors" data-fr="Pour les Leaders & Pasteurs">For Leaders & Pastors</div>
+    <div class="leadership-hero">
+      <div>
+        <h2 class="reveal" data-en="Leading God's People in the Apostolic Pattern" data-fr="Diriger le Peuple de Dieu dans le Modèle Apostolique">Leading God's People in the Apostolic Pattern</h2>
+        <div class="gold-divider reveal"></div>
+        <p class="reveal" data-en="The greatest crisis in the African Church is not a crisis of attendance — it is a crisis of leadership. Too many are doing church, when they should be raising men. Too many are building programs when they should be building disciples." data-fr="La plus grande crise dans l'Église africaine n'est pas une crise de fréquentation — c'est une crise de leadership. Trop font l'église quand ils devraient élever des hommes.">The greatest crisis in the African Church is not a crisis of attendance — it is a crisis of leadership. Too many are doing church, when they should be raising men. Too many are building programs when they should be building disciples.</p>
+        <p class="reveal" style="margin-top:1rem" data-en="The Apostolic Pathway provides tools, teachings, and a community for leaders and pastors to be renewed, realigned, and restored to their God-given mandate." data-fr="Le Chemin Apostolique fournit des outils, des enseignements et une communauté pour que les leaders et les pasteurs soient renouvelés et réalignés avec leur mandat divin.">The Apostolic Pathway provides tools, teachings, and a community for leaders and pastors to be renewed, realigned, and restored to their God-given mandate.</p>
+        <div style="margin-top:2rem" class="reveal">
+          <a href="#assessment" class="btn-primary" data-en="Leadership Assessment" data-fr="Évaluation du Leadership">Leadership Assessment</a>
+        </div>
+      </div>
+      <div class="leader-img reveal">
+        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=85&fit=crop&crop=faces" alt="African pastor and leaders in ministry" loading="lazy">
+      </div>
+    </div>
+
+    <div class="leadership-pillars">
+      <div class="pillar-card reveal">
+        <div class="pillar-num">01</div>
+        <div class="pillar-title" data-en="VISION CLARITY" data-fr="CLARTÉ DE VISION">VISION CLARITY</div>
+        <p style="font-size:0.95rem;color:var(--white-dim)" data-en="Every leader must have a God-given, clear vision — not borrowed, not assumed. We help you rediscover your mandate." data-fr="Chaque leader doit avoir une vision claire de Dieu — pas empruntée, pas supposée. Nous vous aidons à redécouvrir votre mandat.">Every leader must have a God-given, clear vision — not borrowed, not assumed. We help you rediscover your mandate.</p>
+        <p class="teaching-ref">Habakkuk 2:2</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-num">02</div>
+        <div class="pillar-title" data-en="SPIRITUAL RENEWAL" data-fr="RENOUVELLEMENT SPIRITUEL">SPIRITUAL RENEWAL</div>
+        <p style="font-size:0.95rem;color:var(--white-dim)" data-en="Burnout is real. Weariness is real. But so is the refreshing of the Holy Spirit. Renewal resources for tired servants of God." data-fr="L'épuisement est réel. La lassitude est réelle. Mais le rafraîchissement du Saint-Esprit l'est aussi.">Burnout is real. Weariness is real. But so is the refreshing of the Holy Spirit. Renewal resources for tired servants of God.</p>
+        <p class="teaching-ref">Isaiah 40:31</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-num">03</div>
+        <div class="pillar-title" data-en="DISCIPLESHIP SYSTEMS" data-fr="SYSTÈMES DE DISCIPULAT">DISCIPLESHIP SYSTEMS</div>
+        <p style="font-size:0.95rem;color:var(--white-dim)" data-en="Move from running events to building people. Practical frameworks for raising disciples who will raise disciples." data-fr="Passez d'organiser des événements à bâtir des personnes. Cadres pratiques pour élever des disciples.">Move from running events to building people. Practical frameworks for raising disciples who will raise disciples.</p>
+        <p class="teaching-ref">2 Timothy 2:2</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-num">04</div>
+        <div class="pillar-title" data-en="APOSTOLIC ALIGNMENT" data-fr="ALIGNEMENT APOSTOLIQUE">APOSTOLIC ALIGNMENT</div>
+        <p style="font-size:0.95rem;color:var(--white-dim)" data-en="Return to the New Testament pattern of church life, leadership, and ministry that produces lasting fruit." data-fr="Retournez au modèle néotestamentaire de vie d'église, de leadership et de ministère qui produit des fruits durables.">Return to the New Testament pattern of church life, leadership, and ministry that produces lasting fruit.</p>
+        <p class="teaching-ref">Ephesians 4:11-16</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIVAL BANNER -->
+<div class="revival-banner">
+  <h2 class="revival-title" data-en="The Church Must Rise Again." data-fr="L'Église Doit Se Lever à Nouveau.">The Church Must Rise Again.</h2>
+  <p class="revival-sub" data-en="Not with more programs. Not with louder music. But with truth, holiness, and the fire of the Holy Spirit." data-fr="Pas avec plus de programmes. Pas avec une musique plus forte. Mais avec la vérité, la sainteté et le feu du Saint-Esprit.">Not with more programs. Not with louder music. But with truth, holiness, and the fire of the Holy Spirit.</p>
+  <a href="#assessment" class="btn-dark" data-en="Begin Your Pathway Today" data-fr="Commencez Votre Chemin Aujourd'hui">Begin Your Pathway Today</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo"><div class="logo-cross"></div>APW</a>
+        <p style="margin-top:1rem" data-en="The Apostolic Pathway — Restoring the Church to Truth, Power and True Discipleship. A resource hub for the African Church and all who hunger for genuine revival." data-fr="Le Chemin Apostolique — Restaurer l'Église à la Vérité, la Puissance et le Vrai Discipulat.">The Apostolic Pathway — Restoring the Church to Truth, Power and True Discipleship. A resource hub for the African Church and all who hunger for genuine revival.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Navigate" data-fr="Naviguer">Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="#home" data-en="Home" data-fr="Accueil">Home</a></li>
+          <li><a href="#about" data-en="About" data-fr="À Propos">About</a></li>
+          <li><a href="#audience" data-en="Who We Serve" data-fr="Qui Nous Servons">Who We Serve</a></li>
+          <li><a href="#assessment" data-en="Assessment" data-fr="Évaluation">Assessment</a></li>
+          <li><a href="#teachings" data-en="Teachings" data-fr="Enseignements">Teachings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Audiences" data-fr="Audiences">Audiences</h4>
+        <ul class="footer-links">
+          <li><a href="#audience" data-en="New Converts" data-fr="Nouveaux Convertis">New Converts</a></li>
+          <li><a href="#audience" data-en="Backsliders" data-fr="Apostats">Backsliders</a></li>
+          <li><a href="#audience" data-en="Church Workers" data-fr="Travailleurs">Church Workers</a></li>
+          <li><a href="#audience" data-en="Pastors" data-fr="Pasteurs">Pastors</a></li>
+          <li><a href="#audience" data-en="Youths" data-fr="Jeunes">Youths</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Contact" data-fr="Contact">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:671187375">📞 671 187 375</a></li>
+          <li><a href="mailto:lukongchrysantus7@gmail.com">✉️ Email Us</a></li>
+          <li><a href="#counseling" data-en="Talk to Counselor" data-fr="Parler à un Conseiller">Talk to Counselor</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-en="© 2025 The Apostolic Pathway. Built for the restoration of the Church." data-fr="© 2025 Le Chemin Apostolique. Construit pour la restauration de l'Église.">© 2025 The Apostolic Pathway. Built for the restoration of the Church.</p>
+      <span class="footer-cross">✝ Truth · Power · Discipleship</span>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TOP -->
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ============================================================
+// QUIZ DATA
+// ============================================================
+const quizData = {
+  converts: {
+    title: "New Convert Assessment",
+    titleFr: "Évaluation Nouveau Converti",
+    questions: [
+      {q:"How long ago did you give your life to Christ?",qFr:"Il y a combien de temps avez-vous donné votre vie à Christ?",opts:["Less than 1 month","1–6 months","6–12 months","More than 1 year"],optsFr:["Moins d'1 mois","1–6 mois","6–12 mois","Plus d'1 an"]},
+      {q:"Do you have a regular time of personal prayer and Bible reading?",qFr:"Avez-vous un temps régulier de prière personnelle et de lecture biblique?",opts:["Yes, daily","Sometimes","Rarely","I don't know how to start"],optsFr:["Oui, quotidiennement","Parfois","Rarement","Je ne sais pas comment commencer"]},
+      {q:"Has anyone followed up with you since your conversion?",qFr:"Quelqu'un a-t-il fait un suivi avec vous depuis votre conversion?",opts:["Yes, regularly","A few times","Once or twice","No, nobody has"],optsFr:["Oui, régulièrement","Quelques fois","Une ou deux fois","Non, personne"]},
+      {q:"Do you understand the basic doctrines of Christianity?",qFr:"Comprenez-vous les doctrines de base du christianisme?",opts:["Yes, clearly","Somewhat","Not really","I'm very confused"],optsFr:["Oui, clairement","Assez","Pas vraiment","Je suis très confus"]},
+      {q:"Are you actively part of a local church?",qFr:"Faites-vous activement partie d'une église locale?",opts:["Yes, I attend regularly","I go sometimes","I visited but stopped","No, I haven't found one"],optsFr:["Oui, j'y assiste régulièrement","J'y vais parfois","J'y suis allé mais j'ai arrêté","Non, je n'en ai pas trouvé"]},
+      {q:"Have you been baptized in water?",qFr:"Avez-vous été baptisé dans l'eau?",opts:["Yes","No, but I want to be","I don't know if I need to","No, and I'm not sure about it"],optsFr:["Oui","Non, mais je veux l'être","Je ne sais pas si j'en ai besoin","Non, et je n'en suis pas sûr"]},
+      {q:"How do you feel about your relationship with God right now?",qFr:"Comment vous sentez-vous par rapport à votre relation avec Dieu en ce moment?",opts:["Close and growing","Hopeful but uncertain","Distant and confused","I'm doubting if it's real"],optsFr:["Proche et en croissance","Plein d'espoir mais incertain","Distant et confus","Je doute que ce soit réel"]},
+      {q:"Do you have a mentor or discipler guiding you in the faith?",qFr:"Avez-vous un mentor ou un discipeur qui vous guide dans la foi?",opts:["Yes","No, but I want one","I don't know what that means","I manage on my own"],optsFr:["Oui","Non, mais j'en veux un","Je ne sais pas ce que cela signifie","Je me débrouille seul"]},
+      {q:"Are you struggling with any sin or temptation?",qFr:"Luttez-vous contre un péché ou une tentation?",opts:["Not seriously","Sometimes, but I overcome","Yes, regularly","Yes, and I feel defeated"],optsFr:["Pas sérieusement","Parfois, mais je surmonte","Oui, régulièrement","Oui, et je me sens vaincu"]},
+      {q:"Do you understand what it means to be 'born again'?",qFr:"Comprenez-vous ce que signifie être 'né de nouveau'?",opts:["Yes, clearly","I have some idea","Not completely","No, I'm still confused"],optsFr:["Oui, clairement","J'en ai une idée","Pas complètement","Non, je suis encore confus"]},
+      {q:"How often do you attend a church service?",qFr:"À quelle fréquence assistez-vous à un service religieux?",opts:["Every week","2–3 times a month","Once a month","I stopped going"],optsFr:["Chaque semaine","2–3 fois par mois","Une fois par mois","J'ai arrêté d'y aller"]},
+      {q:"Have you told others about your new faith in Christ?",qFr:"Avez-vous parlé à d'autres de votre nouvelle foi en Christ?",opts:["Yes, boldly","To close family/friends","Not yet, I'm not confident","I'm afraid to"],optsFr:["Oui, avec audace","À la famille/amis proches","Pas encore, je n'ai pas confiance","J'ai peur"]},
+      {q:"What is your greatest challenge as a new believer?",qFr:"Quel est votre plus grand défi en tant que nouveau croyant?",opts:["Understanding the Bible","Finding community","Overcoming old habits","Pressure from family/society"],optsFr:["Comprendre la Bible","Trouver une communauté","Surmonter les vieilles habitudes","Pression de la famille/société"]},
+      {q:"Do you believe that God truly loves and accepts you?",qFr:"Croyez-vous que Dieu vous aime et vous accepte vraiment?",opts:["Yes, completely","Most of the time","I struggle to believe that","No, I feel unworthy"],optsFr:["Oui, complètement","La plupart du temps","J'ai du mal à y croire","Non, je me sens indigne"]},
+      {q:"What do you need most right now?",qFr:"De quoi avez-vous le plus besoin en ce moment?",opts:["A discipleship program","A mentor/spiritual father","Biblical teaching resources","Prayer and counseling"],optsFr:["Un programme de discipulat","Un mentor/père spirituel","Ressources d'enseignement biblique","Prière et counseling"]}
+    ],
+    results: {
+      high: {title:"Strong Foundation",titleFr:"Fondement Solide",summary:"You are building well on the foundation of Christ. Stay consistent in your walk.",summaryFr:"Vous construisez bien sur le fondement du Christ. Restez constant dans votre marche.",verse:'"For no one can lay any foundation other than the one already laid, which is Jesus Christ." — 1 Corinthians 3:11',steps:["Continue daily Bible reading — start with the Gospel of John","Find a discipleship group or spiritual mentor in your local church","Pursue water baptism if you haven't yet","Begin memorizing key scriptures weekly"]},
+      mid: {title:"Growing, Needs Grounding",titleFr:"En Croissance, Besoin d'Ancrage",summary:"You have genuine faith but need stronger foundations and discipleship.",summaryFr:"Vous avez une foi authentique mais avez besoin de fondements plus solides et de discipulat.",verse:'"Like newborn infants, long for the pure spiritual milk, that by it you may grow up into salvation." — 1 Peter 2:2',steps:["Commit to daily prayer — even 10 minutes — and Bible reading","Join a new believers class or discipleship group","Reach out to a pastor or spiritual mentor for guidance","Contact our counselors for a free consultation"]},
+      low: {title:"You Need Urgent Discipleship",titleFr:"Vous Avez Besoin d'un Discipulat Urgent",summary:"You are sincere, but without grounding you are vulnerable. Help is available.",summaryFr:"Vous êtes sincère, mais sans ancrage vous êtes vulnérable. De l'aide est disponible.",verse:'"And I am sure of this, that he who began a good work in you will bring it to completion." — Philippians 1:6',steps:["Call or email our counselors today — do not delay","Find a Bible-believing church near you and commit to it","Start reading the Gospel of John this week","God has not abandoned you — His hand is outstretched"]}
+    }
+  },
+  backsliders: {
+    title: "Restoration Assessment",
+    titleFr: "Évaluation de Restauration",
+    questions: [
+      {q:"When did you last have an active, consistent walk with God?",qFr:"Quand avez-vous eu pour la dernière fois une marche active et cohérente avec Dieu?",opts:["Within the last 6 months","1–2 years ago","3–5 years ago","More than 5 years ago"],optsFr:["Dans les 6 derniers mois","Il y a 1–2 ans","Il y a 3–5 ans","Il y a plus de 5 ans"]},
+      {q:"What was the primary reason you drifted from God?",qFr:"Quelle était la raison principale de votre éloignement de Dieu?",opts:["Church hurt or betrayal","Personal sin or failure","Lost interest / life got busy","Family or relationship issues"],optsFr:["Blessure ou trahison d'église","Péché personnel ou échec","Perte d'intérêt / vie occupée","Problèmes familiaux ou relationnels"]},
+      {q:"Do you still believe in God?",qFr:"Croyez-vous encore en Dieu?",opts:["Yes, deeply","Yes, but with doubts","I'm not sure anymore","I've questioned everything"],optsFr:["Oui, profondément","Oui, mais avec des doutes","Je n'en suis plus sûr","J'ai tout remis en question"]},
+      {q:"How often do you think about returning to God?",qFr:"À quelle fréquence pensez-vous à revenir à Dieu?",opts:["Very often — it's on my heart","Sometimes","Rarely","This is the first time in a while"],optsFr:["Très souvent — c'est dans mon cœur","Parfois","Rarement","C'est la première fois depuis longtemps"]},
+      {q:"Have you experienced church hurt or betrayal?",qFr:"Avez-vous subi une blessure ou une trahison d'église?",opts:["Yes, significantly","Somewhat, but I've moved on","Not really","That's not my issue"],optsFr:["Oui, significativement","Un peu, mais j'ai avancé","Pas vraiment","Ce n'est pas mon problème"]},
+      {q:"Are there unconfessed sins that you feel are blocking your return?",qFr:"Y a-t-il des péchés non confessés que vous sentez bloquer votre retour?",opts:["Yes, many","A few significant ones","I'm not sure","I don't think so"],optsFr:["Oui, beaucoup","Quelques-uns significatifs","Je ne suis pas sûr","Je ne pense pas"]},
+      {q:"Do you believe God can forgive you and receive you back?",qFr:"Croyez-vous que Dieu peut vous pardonner et vous recevoir?",opts:["Yes, completely","I hope so","I'm not sure I deserve it","No, I've gone too far"],optsFr:["Oui, complètement","Je l'espère","Je ne suis pas sûr de le mériter","Non, je suis allé trop loin"]},
+      {q:"Have you been isolated from Christian community?",qFr:"Avez-vous été isolé de la communauté chrétienne?",opts:["Yes, completely isolated","Mostly isolated","I have a few Christian friends","Not really"],optsFr:["Oui, complètement isolé","Principalement isolé","J'ai quelques amis chrétiens","Pas vraiment"]},
+      {q:"Do you still pray, even occasionally?",qFr:"Priez-vous encore, même occasionnellement?",opts:["Yes, regularly","Sometimes, when desperate","Rarely","I've stopped completely"],optsFr:["Oui, régulièrement","Parfois, quand désespéré","Rarement","J'ai complètement arrêté"]},
+      {q:"What is your emotional state regarding your spiritual life?",qFr:"Quel est votre état émotionnel concernant votre vie spirituelle?",opts:["Hopeful and ready","Sad and longing","Ashamed and afraid","Numb and indifferent"],optsFr:["Plein d'espoir et prêt","Triste et nostalgique","Honteux et craintif","Engourdi et indifférent"]},
+      {q:"Would you be open to speaking with a Christian counselor?",qFr:"Seriez-vous ouvert à parler avec un conseiller chrétien?",opts:["Yes, absolutely","Maybe, I'm hesitant","I'm not sure I'm ready","Probably not"],optsFr:["Oui, absolument","Peut-être, j'hésite","Je ne suis pas sûr d'être prêt","Probablement pas"]},
+      {q:"Do you miss the presence of God in your life?",qFr:"Regrettez-vous la présence de Dieu dans votre vie?",opts:["Yes, deeply","Sometimes","A little","Not really"],optsFr:["Oui, profondément","Parfois","Un peu","Pas vraiment"]},
+      {q:"Has bitterness or unforgiveness contributed to your spiritual state?",qFr:"L'amertume ou le manque de pardon ont-ils contribué à votre état spirituel?",opts:["Yes, significantly","Somewhat","Maybe a little","Not at all"],optsFr:["Oui, significativement","Un peu","Peut-être un peu","Pas du tout"]},
+      {q:"Do you feel that God is drawing you back even now?",qFr:"Sentez-vous que Dieu vous attire en ce moment même?",opts:["Yes, strongly","I sense something","I'm hoping so","I'm not sure"],optsFr:["Oui, fortement","Je sens quelque chose","Je l'espère","Je ne suis pas sûr"]},
+      {q:"What would most help you return to God?",qFr:"Qu'est-ce qui vous aiderait le plus à revenir à Dieu?",opts:["A safe, non-judgmental community","Counseling and prayer","Clear biblical teaching on grace","Time and space to process"],optsFr:["Une communauté sûre, sans jugement","Counseling et prière","Enseignement biblique clair sur la grâce","Temps et espace pour traiter"]}
+    ],
+    results: {
+      high: {title:"The Father Sees You Coming",titleFr:"Le Père Vous Voit Venir",summary:"You are close to returning. The Father is already running toward you.",summaryFr:"Vous êtes proche du retour. Le Père court déjà vers vous.",verse:'"But while he was still a long way off, his father saw him and was filled with compassion for him; he ran to his son." — Luke 15:20',steps:["Pray a simple prayer of return — God hears you where you are","Find a grace-filled church community this weekend","Call our counselors — they will walk with you, not judge you","Accept that the Father's arms are wide open for you"]},
+      mid: {title:"Healing is a Process — You're Beginning",titleFr:"La Guérison est un Processus — Vous Commencez",summary:"You are wounded but not finished. Grace is sufficient for your restoration.",summaryFr:"Vous êtes blessé mais pas fini. La grâce est suffisante pour votre restauration.",verse:'"He heals the brokenhearted and binds up their wounds." — Psalm 147:3',steps:["Contact our counselors for a confidential restoration conversation","Address any unforgiveness through prayer and biblical guidance","Take the first step toward a safe Christian community","Read Psalm 51 daily — David was restored, and so can you"]},
+      low: {title:"You Are Not Too Far Gone",titleFr:"Vous N'êtes Pas Trop Loin",summary:"No matter how far you've wandered, God's grace is greater. Return today.",summaryFr:"Peu importe combien vous vous êtes égaré, la grâce de Dieu est plus grande. Revenez aujourd'hui.",verse:'"Return to the Lord your God, for he is gracious and compassionate, slow to anger and abounding in love." — Joel 2:13',steps:["Call us right now: 671 187 375 — you don't have to walk alone","There is no sin too great for God's grace — believe this truth","Your past does not define your future in Christ","Take one step back toward God today — He will meet you there"]}
+    }
+  },
+  workers:{title:"Church Worker Assessment",titleFr:"Évaluation Travailleur d'Église",questions:[
+    {q:"Why did you first start serving in the church?",qFr:"Pourquoi avez-vous commencé à servir dans l'église?",opts:["Genuine calling from God","Someone encouraged me","I wanted to belong","I'm not sure anymore"],optsFr:["Véritable appel de Dieu","Quelqu'un m'a encouragé","Je voulais appartenir","Je n'en suis plus sûr"]},
+    {q:"Is your service motivated by love for God or by recognition?",qFr:"Votre service est-il motivé par l'amour de Dieu ou par la reconnaissance?",opts:["Primarily love for God","Mostly love, sometimes recognition","I want to be honest — recognition matters to me","I serve to be seen"],optsFr:["Principalement l'amour de Dieu","Surtout l'amour, parfois la reconnaissance","Je veux être honnête — la reconnaissance compte","Je sers pour être vu"]},
+    {q:"How is your personal spiritual life apart from your church role?",qFr:"Comment est votre vie spirituelle personnelle en dehors de votre rôle d'église?",opts:["Vibrant and growing","Okay, but could be better","Weak and neglected","Non-existent — it's all role-based"],optsFr:["Vibrante et en croissance","Acceptable, mais pourrait être mieux","Faible et négligée","Inexistante — tout est basé sur le rôle"]},
+    {q:"Do you experience jealousy or competition with other church workers?",qFr:"Éprouvez-vous de la jalousie ou de la compétition avec d'autres travailleurs d'église?",opts:["No, I celebrate others","Rarely","Sometimes, I'm honest","Yes, it's a real struggle"],optsFr:["Non, je célèbre les autres","Rarement","Parfois, je suis honnête","Oui, c'est une vraie lutte"]},
+    {q:"Do you serve differently when the pastor is watching vs. when he's not?",qFr:"Servez-vous différemment quand le pasteur regarde vs. quand il ne regarde pas?",opts:["No, I serve the same always","Mostly the same","I notice a slight difference","Yes, significantly different"],optsFr:["Non, je sers toujours de la même façon","Surtout de la même façon","Je remarque une légère différence","Oui, significativement différent"]},
+    {q:"Are you currently experiencing ministry burnout?",qFr:"Connaissez-vous actuellement un épuisement ministériel?",opts:["No, I'm energized","A little tired but okay","Yes, I'm exhausted","I've mentally checked out"],optsFr:["Non, je suis énergisé","Un peu fatigué mais ça va","Oui, je suis épuisé","Je me suis mentalement déconnecté"]},
+    {q:"Do you feel appreciated and valued in your role?",qFr:"Vous sentez-vous apprécié et valorisé dans votre rôle?",opts:["Yes, very much","Sometimes","Rarely","Never — I feel invisible"],optsFr:["Oui, beaucoup","Parfois","Rarement","Jamais — je me sens invisible"]},
+    {q:"Are there unresolved conflicts with other church members or leaders?",qFr:"Y a-t-il des conflits non résolus avec d'autres membres ou leaders d'église?",opts:["No, all is well","Minor ones","One significant conflict","Multiple serious conflicts"],optsFr:["Non, tout va bien","Des mineurs","Un conflit significatif","Plusieurs conflits sérieux"]},
+    {q:"Do you know your spiritual gifts clearly?",qFr:"Connaissez-vous clairement vos dons spirituels?",opts:["Yes, clearly","I have some idea","Not really","No, I serve in any available role"],optsFr:["Oui, clairement","J'en ai une idée","Pas vraiment","Non, je sers dans tout rôle disponible"]},
+    {q:"Do you pray for those you serve?",qFr:"Priez-vous pour ceux que vous servez?",opts:["Yes, regularly","Sometimes","Rarely","I've never thought about it"],optsFr:["Oui, régulièrement","Parfois","Rarement","Je n'y ai jamais pensé"]},
+    {q:"Do you see your service as ministry or as duty?",qFr:"Voyez-vous votre service comme un ministère ou comme un devoir?",opts:["As a joyful calling","Mostly ministry, sometimes duty","Mostly duty","Just duty — I feel obligated"],optsFr:["Comme un appel joyeux","Surtout ministère, parfois devoir","Surtout devoir","Juste devoir — je me sens obligé"]},
+    {q:"Have you received any discipleship or training for your role?",qFr:"Avez-vous reçu un discipulat ou une formation pour votre rôle?",opts:["Yes, structured training","Informal mentoring","Very little","None at all"],optsFr:["Oui, formation structurée","Mentorat informel","Très peu","Aucun"]},
+    {q:"Is your church role affecting your family life negatively?",qFr:"Votre rôle d'église affecte-t-il négativement votre vie familiale?",opts:["No, there's good balance","Slightly","Yes, noticeably","My family feels neglected"],optsFr:["Non, il y a un bon équilibre","Légèrement","Oui, notablement","Ma famille se sent négligée"]},
+    {q:"Would you serve even if you received no recognition at all?",qFr:"Serviriez-vous même si vous ne receviez aucune reconnaissance?",opts:["Yes, absolutely","I think so","I'd like to think so, but I'm not sure","Probably not"],optsFr:["Oui, absolument","Je pense que oui","Je voudrais le croire, mais je ne suis pas sûr","Probablement pas"]},
+    {q:"What motivates your continued service most honestly?",qFr:"Qu'est-ce qui motive le plus honnêtement votre service continu?",opts:["Love for God and His people","Sense of duty and commitment","Habit — I've always done it","Fear of what people will say if I stop"],optsFr:["Amour de Dieu et de Son peuple","Sens du devoir et d'engagement","Habitude — j'ai toujours fait ça","Peur de ce que les gens diront si j'arrête"]}
+  ],results:{high:{title:"Faithful Servant — Keep Burning",titleFr:"Serviteur Fidèle — Continuez à Brûler",summary:"Your service is rooted in love. Continue to guard your heart and serve from overflow.",summaryFr:"Votre service est enraciné dans l'amour. Continuez à garder votre cœur et à servir depuis l'abondance.",verse:'"Whatever you do, work at it with all your heart, as working for the Lord, not for human masters." — Colossians 3:23',steps:["Schedule regular personal devotion time separate from your ministry role","Evaluate your spiritual gifts and ensure your role aligns with them","Mentor a younger worker — pour what you have into others","Celebrate others' successes as enthusiastically as your own"]},mid:{title:"Sincere but Needs Realignment",titleFr:"Sincère mais Besoin de Réalignement",summary:"You are genuinely committed, but some areas need a heart check.",summaryFr:"Vous êtes vraiment engagé, mais certains domaines nécessitent un examen du cœur.",verse:'"Search me, God, and know my heart; test me and know my anxious thoughts." — Psalm 139:23',steps:["Spend time alone with God asking: Why do I really serve?","Address any jealousy or competition through honest prayer and confession","Seek a heart-to-heart conversation with your pastor or mentor","Contact us if you need guidance — we are here for you"]},low:{title:"A Heart Check is Urgent",titleFr:"Un Examen du Cœur est Urgent",summary:"God sees your effort — but invites you into deeper, purer motivation.",summaryFr:"Dieu voit vos efforts — mais vous invite dans une motivation plus profonde et plus pure.",verse:'"Not by might nor by power, but by my Spirit, says the Lord Almighty." — Zechariah 4:6',steps:["Pause your activities if needed and return to personal relationship with God","Confess any pride, competition or eye-service to God","Read Matthew 20:25-28 — Jesus defines true greatness","Call our counselors for a confidential conversation about ministry renewal"]}
+  }},
+  leaders:{title:"Church Leader Assessment",titleFr:"Évaluation Dirigeant d'Église",questions:[
+    {q:"Do you have a clear, written vision for your ministry?",qFr:"Avez-vous une vision claire et écrite pour votre ministère?",opts:["Yes, very clear","Somewhat clear","Vague","I don't have one"],optsFr:["Oui, très claire","Assez claire","Vague","Je n'en ai pas"]},
+    {q:"Are those you lead aligned with the vision?",qFr:"Ceux que vous dirigez sont-ils alignés avec la vision?",opts:["Yes, mostly aligned","Some are, some aren't","Mostly misaligned","I'm not sure what they think"],optsFr:["Oui, principalement alignés","Certains le sont, d'autres non","Principalement désalignés","Je ne sais pas ce qu'ils pensent"]},
+    {q:"How often do you deliberately develop those under your leadership?",qFr:"À quelle fréquence développez-vous délibérément ceux sous votre direction?",opts:["Weekly/regularly","Monthly","Occasionally","Rarely or never"],optsFr:["Hebdomadairement/régulièrement","Mensuellement","Occasionnellement","Rarement ou jamais"]},
+    {q:"Is your leadership style servant-hearted or positional?",qFr:"Votre style de direction est-il serviable ou positionnel?",opts:["Primarily servant-hearted","Mostly servant, sometimes positional","Mix of both","Primarily positional"],optsFr:["Principalement serviable","Surtout serviable, parfois positionnel","Mélange des deux","Principalement positionnel"]},
+    {q:"Do you have accountability structures in your own life?",qFr:"Avez-vous des structures de responsabilité dans votre propre vie?",opts:["Yes, strong accountability","Somewhat","Minimal","No, I operate alone"],optsFr:["Oui, forte responsabilité","Un peu","Minime","Non, je fonctionne seul"]},
+    {q:"Are there conflicts among your leadership team?",qFr:"Y a-t-il des conflits au sein de votre équipe de direction?",opts:["No significant conflicts","Minor tensions","Ongoing conflicts","Serious division"],optsFr:["Pas de conflits significatifs","Tensions mineures","Conflits en cours","Division sérieuse"]},
+    {q:"Does your leadership reflect biblical principles or cultural norms?",qFr:"Votre direction reflète-t-elle les principes bibliques ou les normes culturelles?",opts:["Primarily biblical","Mostly biblical","Mix of both","Mostly cultural"],optsFr:["Principalement biblique","Surtout biblique","Mélange des deux","Surtout culturel"]},
+    {q:"How do you respond to correction or feedback?",qFr:"Comment répondez-vous à la correction ou aux retours?",opts:["I welcome it openly","I accept it but find it hard","I struggle with it","I resist it"],optsFr:["Je l'accueille ouvertement","Je l'accepte mais c'est difficile","J'ai du mal","Je le résiste"]},
+    {q:"Are you raising potential successors or future leaders?",qFr:"Élevez-vous des successeurs potentiels ou des futurs leaders?",opts:["Yes, intentionally","I'm beginning to","Not yet but I want to","I haven't thought about it"],optsFr:["Oui, intentionnellement","Je commence","Pas encore mais je veux","Je n'y ai pas pensé"]},
+    {q:"Do you feel spiritually strong enough to lead others?",qFr:"Vous sentez-vous spirituellement assez fort pour diriger les autres?",opts:["Yes, I'm in a good place","Mostly, with some struggles","I'm running low","I'm spiritually depleted"],optsFr:["Oui, je suis dans un bon endroit","Surtout, avec quelques luttes","Je baisse","Je suis spirituellement épuisé"]},
+    {q:"Is your church/ministry producing transformed disciples?",qFr:"Votre église/ministère produit-il des disciples transformés?",opts:["Yes, visibly","Some transformation","Very little","We have attendance but little transformation"],optsFr:["Oui, visiblement","Quelques transformations","Très peu","Nous avons la fréquentation mais peu de transformation"]},
+    {q:"Do you balance administration and spiritual ministry well?",qFr:"Équilibrez-vous bien l'administration et le ministère spirituel?",opts:["Yes, good balance","Mostly administrative","Mostly spiritual","Completely overwhelmed by admin"],optsFr:["Oui, bon équilibre","Surtout administratif","Surtout spirituel","Complètement submergé par l'administratif"]},
+    {q:"How transparent are you with your congregation about challenges?",qFr:"À quel point êtes-vous transparent avec votre congrégation sur les défis?",opts:["Very transparent","Somewhat","I prefer to appear strong","Not at all — I hide struggles"],optsFr:["Très transparent","Un peu","Je préfère paraître fort","Pas du tout — je cache les luttes"]},
+    {q:"Are you aligned with your church's apostolic/founding vision?",qFr:"Êtes-vous aligné avec la vision apostolique/fondatrice de votre église?",opts:["Yes, fully","Mostly","Partially","I've drifted from it"],optsFr:["Oui, pleinement","Surtout","Partiellement","Je m'en suis éloigné"]},
+    {q:"What does your leadership most need right now?",qFr:"De quoi votre direction a-t-elle le plus besoin en ce moment?",opts:["Vision renewal","Team alignment","Spiritual renewal","Leadership training and mentoring"],optsFr:["Renouveau de vision","Alignement d'équipe","Renouveau spirituel","Formation et mentorat en leadership"]}
+  ],results:{high:{title:"Aligned Leader — Sharpen Your Sword",titleFr:"Leader Aligné — Affûtez Votre Épée",summary:"You are leading well. Continue to develop others and guard your personal walk.",summaryFr:"Vous dirigez bien. Continuez à développer les autres et à garder votre marche personnelle.",verse:'"Be shepherds of God\'s flock that is under your care, watching over them—not because you must, but because you are willing." — 1 Peter 5:2',steps:["Identify 2-3 leaders you will intentionally develop this year","Clarify and communicate your vision to your entire team","Establish or strengthen your accountability relationships","Schedule quarterly leadership retreats for your team"]},mid:{title:"Good Foundation, Needs Sharpening",titleFr:"Bon Fondement, Besoin d'Affinement",summary:"You are committed but need clarity and realignment in key areas.",summaryFr:"Vous êtes engagé mais avez besoin de clarté et de réalignement dans des domaines clés.",verse:'"Where there is no vision, the people perish." — Proverbs 29:18',steps:["Write down or revisit your God-given vision in prayer","Address team conflicts through honest, grace-filled conversation","Increase your investment in developing others deliberately","Contact us for leadership coaching and resources"]},low:{title:"Urgent: Leadership Renewal Needed",titleFr:"Urgent: Renouveau de Leadership Nécessaire",summary:"Your leadership has drifted. A season of renewal is not failure — it is wisdom.",summaryFr:"Votre leadership a dérivé. Une saison de renouveau n'est pas un échec — c'est de la sagesse.",verse:'"Humble yourselves, therefore, under God\'s mighty hand, that he may lift you up in due time." — 1 Peter 5:6',steps:["Schedule a personal spiritual retreat — alone with God","Contact our counselors for confidential leadership guidance","Identify and address the root causes of drift in your leadership","Begin building accountability structures immediately"]}
+  }},
+  pastors:{title:"Pastor's Assessment",titleFr:"Évaluation du Pasteur",questions:[
+    {q:"When last did you take a deliberate spiritual retreat?",qFr:"Quand avez-vous pris une retraite spirituelle délibérée pour la dernière fois?",opts:["Within 3 months","Within the last year","More than a year ago","I never have"],optsFr:["Dans les 3 derniers mois","Au cours de la dernière année","Il y a plus d'un an","Je n'en ai jamais eu"]},
+    {q:"Is your primary focus discipleship or ministry programs?",qFr:"Votre priorité principale est-elle le discipulat ou les programmes ministériels?",opts:["Discipleship — raising men","Balanced mix","Mostly programs","It's all programs — I confess"],optsFr:["Discipulat — élever des hommes","Mélange équilibré","Principalement des programmes","Ce sont tous des programmes — je confesse"]},
+    {q:"Do you have people in your life who speak truth to you?",qFr:"Avez-vous des personnes dans votre vie qui vous disent la vérité?",opts:["Yes, regularly","A few people","Rarely","I am essentially alone in this"],optsFr:["Oui, régulièrement","Quelques personnes","Rarement","Je suis essentiellement seul dans ça"]},
+    {q:"Are you currently experiencing pastoral burnout?",qFr:"Connaissez-vous actuellement un épuisement pastoral?",opts:["No, I'm energized","Slightly fatigued","Yes, significantly","I'm at breaking point"],optsFr:["Non, je suis énergisé","Légèrement fatigué","Oui, significativement","Je suis au point de rupture"]},
+    {q:"How is your marriage and family life?",qFr:"Comment va votre mariage et votre vie familiale?",opts:["Thriving and healthy","Okay, some challenges","Strained by ministry demands","In serious difficulty"],optsFr:["Épanouissant et sain","Acceptable, quelques défis","Tendu par les exigences du ministère","En sérieuse difficulté"]},
+    {q:"Do you preach what you are personally living?",qFr:"Prêchez-vous ce que vous vivez personnellement?",opts:["Yes, with integrity","Mostly yes","There are gaps I'm working on","There is a significant gap"],optsFr:["Oui, avec intégrité","Surtout oui","Il y a des lacunes sur lesquelles je travaille","Il y a un écart significatif"]},
+    {q:"Are you intentionally raising the next generation of leaders?",qFr:"Élevez-vous intentionnellement la prochaine génération de leaders?",opts:["Yes, with a clear plan","Informally","I want to but haven't started","This is an area I've neglected"],optsFr:["Oui, avec un plan clair","De façon informelle","Je veux mais je n'ai pas commencé","C'est un domaine que j'ai négligé"]},
+    {q:"Do you feel your congregation is spiritually growing?",qFr:"Pensez-vous que votre congrégation grandit spirituellement?",opts:["Yes, clearly","Some are, many aren't","Not significantly","We are declining"],optsFr:["Oui, clairement","Certains le sont, beaucoup ne le sont pas","Pas significativement","Nous déclinons"]},
+    {q:"Are financial pressures affecting your ministry focus?",qFr:"Les pressions financières affectent-elles votre concentration ministérielle?",opts:["Not significantly","Somewhat","Yes, it's a major distraction","It's consuming me"],optsFr:["Pas significativement","Un peu","Oui, c'est une distraction majeure","Ça me consume"]},
+    {q:"How often do you pray with your leadership team?",qFr:"À quelle fréquence priez-vous avec votre équipe de direction?",opts:["Weekly","Monthly","Occasionally","We don't have a prayer culture"],optsFr:["Hebdomadairement","Mensuellement","Occasionnellement","Nous n'avons pas de culture de prière"]},
+    {q:"Is your church growing in disciples or just in attendance numbers?",qFr:"Votre église grandit-elle en disciples ou juste en nombre de fréquentation?",opts:["In both disciples and attendance","In attendance but weak discipleship","Numbers are declining","We have activity but little real growth"],optsFr:["En disciples et en fréquentation","En fréquentation mais discipulat faible","Les chiffres déclinent","Nous avons de l'activité mais peu de vraie croissance"]},
+    {q:"Do you have someone who spiritually fathers or mentors you?",qFr:"Avez-vous quelqu'un qui vous paternitre ou vous mentor spirituellement?",opts:["Yes, actively","Informally","Not really","I have no spiritual covering"],optsFr:["Oui, activement","De façon informelle","Pas vraiment","Je n'ai pas de couverture spirituelle"]},
+    {q:"Are there hidden sins or secret struggles you are carrying?",qFr:"Y a-t-il des péchés cachés ou des luttes secrètes que vous portez?",opts:["No, I walk in transparency","Minor struggles I'm addressing","Yes, and I feel alone in it","Yes, and I'm afraid to tell anyone"],optsFr:["Non, je marche dans la transparence","Des luttes mineures que j'aborde","Oui, et je me sens seul","Oui, et j'ai peur de le dire à quelqu'un"]},
+    {q:"Does your congregation know your vision clearly?",qFr:"Votre congrégation connaît-elle clairement votre vision?",opts:["Yes, very clearly","Somewhat","Vaguely","No, and neither do I fully"],optsFr:["Oui, très clairement","Un peu","Vaguement","Non, et moi non plus complètement"]},
+    {q:"What does your ministry most urgently need?",qFr:"De quoi votre ministère a-t-il le plus besoin de toute urgence?",opts:["Spiritual renewal for me personally","A discipleship strategy","A stronger leadership team","Restoration and clarity of vision"],optsFr:["Renouveau spirituel pour moi personnellement","Une stratégie de discipulat","Une équipe de direction plus forte","Restauration et clarté de vision"]}
+  ],results:{high:{title:"Faithful Shepherd — Renew Your Strength",titleFr:"Pasteur Fidèle — Renouvelez Vos Forces",summary:"You are leading with integrity. Guard your inner life as carefully as your outer ministry.",summaryFr:"Vous dirigez avec intégrité. Gardez votre vie intérieure aussi soigneusement que votre ministère extérieur.",verse:'"He tends his flock like a shepherd: He gathers the lambs in his arms and carries them close to his heart." — Isaiah 40:11',steps:["Schedule your next personal retreat within the next 30 days","Identify 2 young men/women you will pour into this year","Strengthen your accountability relationships — be honest with a trusted brother","Lead your team into a season of prayer and vision renewal"]},mid:{title:"Still Standing — But You Need Renewal",titleFr:"Toujours Debout — Mais Vous Avez Besoin de Renouveau",summary:"You are faithful but fatigued. God wants to restore your fire before it goes out.",summaryFr:"Vous êtes fidèle mais fatigué. Dieu veut restaurer votre feu avant qu'il ne s'éteigne.",verse:'"Even youths grow tired and weary... but those who hope in the Lord will renew their strength." — Isaiah 40:30-31',steps:["Prioritize personal time with God before ministry activities","Be honest with a trusted friend or counselor about your struggles","Begin a deliberate discipleship structure in your church","Contact us — we walk with pastors, not just criticize them"]},low:{title:"Pastor, You Need Care Too",titleFr:"Pasteur, Vous Aussi Avez Besoin de Soins",summary:"You give to everyone. But God says even Elijah needed rest, food, and a word from heaven.",summaryFr:"Vous donnez à tout le monde. Mais Dieu dit que même Élie avait besoin de repos, de nourriture et d'une parole du ciel.",verse:'"Come to me, all you who are weary and burdened, and I will give you rest." — Matthew 11:28',steps:["Stop. Rest. Do not feel guilty — God commands it for the faithful","Call our counselors TODAY — 671 187 375 — in complete confidence","Confess your hidden struggles to God and one trusted person","God is not done with you — this is renewal, not ending"]}
+  }},
+  youths:{title:"Youth Discipleship Assessment",titleFr:"Évaluation Discipulat des Jeunes",questions:[
+    {q:"How old are you?",qFr:"Quel âge avez-vous?",opts:["13–17","18–22","23–29","30+"],optsFr:["13–17","18–22","23–29","30+"]},
+    {q:"How would you describe your relationship with God right now?",qFr:"Comment décririez-vous votre relation avec Dieu en ce moment?",opts:["Close and growing","On and off","Distant","I'm not sure I have one"],optsFr:["Proche et en croissance","En dents de scie","Distant","Je ne suis pas sûr d'en avoir une"]},
+    {q:"Do you have a spiritual mentor or father figure guiding your faith?",qFr:"Avez-vous un mentor spirituel ou une figure paternelle qui guide votre foi?",opts:["Yes, actively","Informally","Not really","No, I feel alone in my faith"],optsFr:["Oui, activement","De façon informelle","Pas vraiment","Non, je me sens seul dans ma foi"]},
+    {q:"Is the Church providing what you need as a young person?",qFr:"L'Église fournit-elle ce dont vous avez besoin en tant que jeune?",opts:["Yes, very much","Somewhat","Not really","No, I feel invisible in church"],optsFr:["Oui, beaucoup","Un peu","Pas vraiment","Non, je me sens invisible à l'église"]},
+    {q:"Do you feel your gifts and potential are recognized in your church?",qFr:"Pensez-vous que vos dons et votre potentiel sont reconnus dans votre église?",opts:["Yes, I'm given opportunity","Sometimes","Rarely","No, youth are sidelined"],optsFr:["Oui, on me donne des opportunités","Parfois","Rarement","Non, les jeunes sont marginalisés"]},
+    {q:"Are you struggling with temptations specific to your generation?",qFr:"Luttez-vous contre des tentations spécifiques à votre génération?",opts:["Not seriously","Occasionally","Yes, regularly","Yes, and I feel alone in it"],optsFr:["Pas sérieusement","Occasionnellement","Oui, régulièrement","Oui, et je me sens seul"]},
+    {q:"Do you see a future for yourself in the Church?",qFr:"Vous voyez-vous un avenir dans l'Église?",opts:["Yes, absolutely","Maybe","I'm not sure","No, I plan to leave"],optsFr:["Oui, absolument","Peut-être","Je ne suis pas sûr","Non, je prévois de partir"]},
+    {q:"Is social media affecting your spiritual life?",qFr:"Les réseaux sociaux affectent-ils votre vie spirituelle?",opts:["Not significantly","Somewhat","Yes, it's a major challenge","It's dominated my spiritual life negatively"],optsFr:["Pas significativement","Un peu","Oui, c'est un défi majeur","Ça a dominé ma vie spirituelle négativement"]},
+    {q:"Do you have Christian peers or friends who strengthen your faith?",qFr:"Avez-vous des pairs ou amis chrétiens qui renforcent votre foi?",opts:["Yes, strong community","A few","Barely any","None at all"],optsFr:["Oui, forte communauté","Quelques-uns","À peine","Aucun"]},
+    {q:"Are you in a youth group or discipleship program?",qFr:"Êtes-vous dans un groupe de jeunes ou un programme de discipulat?",opts:["Yes, active and growing","Yes but it's weak","No, but I want to be","No interest currently"],optsFr:["Oui, actif et en croissance","Oui mais c'est faible","Non, mais je veux l'être","Pas d'intérêt actuellement"]},
+    {q:"Do you feel pressure from your peers to compromise your faith?",qFr:"Ressentez-vous une pression de vos pairs pour compromettre votre foi?",opts:["Not really","Sometimes","Often","Constantly — it's overwhelming"],optsFr:["Pas vraiment","Parfois","Souvent","Constamment — c'est accablant"]},
+    {q:"Have you identified your God-given purpose?",qFr:"Avez-vous identifié votre but divin?",opts:["Yes, clearly","I'm discovering it","Vaguely","No, I feel lost"],optsFr:["Oui, clairement","Je suis en train de le découvrir","Vaguement","Non, je me sens perdu"]},
+    {q:"Do you feel church leaders understand the challenges youth face?",qFr:"Pensez-vous que les leaders d'église comprennent les défis des jeunes?",opts:["Yes, very much","Somewhat","Not really","No, there's a big disconnect"],optsFr:["Oui, beaucoup","Un peu","Pas vraiment","Non, il y a une grande déconnexion"]},
+    {q:"Would you be open to a mentorship relationship?",qFr:"Seriez-vous ouvert à une relation de mentorat?",opts:["Yes, definitely","Maybe","Not sure","I don't think I need it"],optsFr:["Oui, certainement","Peut-être","Pas sûr","Je ne pense pas en avoir besoin"]},
+    {q:"What do you most need from the Church right now?",qFr:"De quoi avez-vous le plus besoin de l'Église en ce moment?",opts:["A mentor who understands my world","A safe space to ask hard questions","Opportunities to serve and lead","Biblical answers to modern challenges"],optsFr:["Un mentor qui comprend mon monde","Un espace sûr pour poser des questions difficiles","Des opportunités de servir et de diriger","Des réponses bibliques aux défis modernes"]}
+  ],results:{high:{title:"Burning Bright — Keep the Fire!",titleFr:"Brillant — Gardez le Feu!",summary:"You are a young person on fire for God. Your generation needs your testimony.",summaryFr:"Vous êtes un jeune en feu pour Dieu. Votre génération a besoin de votre témoignage.",verse:'"Don\'t let anyone look down on you because you are young, but set an example for the believers in speech, in conduct, in love, in faith and in purity." — 1 Timothy 4:12',steps:["Seek out a spiritual mentor — actively ask for discipleship","Use your influence (social media, friendships) to point others to Christ","Get involved in your church's youth leadership and ministry","Read 1 Samuel — David was young when God used him mightily"]},mid:{title:"Promising — Press Through the Pressure",titleFr:"Prometteur — Résistez à la Pression",summary:"You have genuine faith and potential. Don't let the culture or loneliness extinguish it.",summaryFr:"Vous avez une foi authentique et un potentiel. Ne laissez pas la culture ou la solitude l'éteindre.",verse:'"For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you." — Jeremiah 29:11',steps:["Find or ask for a spiritual mentor in your church or network","Stay consistent in daily prayer — even 10 minutes changes everything","Be intentional about the friendships and content you consume","Contact us — we connect young people with mentors and resources"]},low:{title:"You Are Not Forgotten — God Sees Your Generation",titleFr:"Vous N'êtes Pas Oublié — Dieu Voit Votre Génération",summary:"You may feel lost or unseen — but God has a plan specifically for your generation.",summaryFr:"Vous pouvez vous sentir perdu ou invisible — mais Dieu a un plan spécifiquement pour votre génération.",verse:'"For you created my inmost being; you knit me together in my mother\'s womb. I praise you because I am fearfully and wonderfully made." — Psalm 139:13-14',steps:["Reach out to us — we are here for you, not to judge","Talk to an older, trusted Christian about what you're going through","Know that your struggles with faith are normal — you are not alone","Your generation is called to shape Africa — don't give up"]}
+  }},
+  church:{title:"Church Health Assessment",titleFr:"Évaluation de la Santé de l'Église",questions:[
+    {q:"Does your church have a clear, communicated discipleship strategy?",qFr:"Votre église a-t-elle une stratégie de discipulat claire et communiquée?",opts:["Yes, structured and active","Informal / vague","We're working on it","No, not at all"],optsFr:["Oui, structurée et active","Informelle / vague","Nous y travaillons","Non, pas du tout"]},
+    {q:"Are church activities producing transformed lives?",qFr:"Les activités de l'église produisent-elles des vies transformées?",opts:["Yes, visibly","Some transformation","Hard to measure","Activity is high but transformation is low"],optsFr:["Oui, visiblement","Quelques transformations","Difficile à mesurer","L'activité est élevée mais la transformation est faible"]},
+    {q:"Is the Holy Spirit's presence evident and prioritized in gatherings?",qFr:"La présence du Saint-Esprit est-elle évidente et prioritaire dans les rassemblements?",opts:["Yes, central to everything","Mostly","Sometimes","We prioritize programs over Spirit"],optsFr:["Oui, central à tout","Surtout","Parfois","Nous privilégions les programmes à l'Esprit"]},
+    {q:"Is the preaching rooted in apostolic doctrine?",qFr:"La prédication est-elle ancrée dans la doctrine apostolique?",opts:["Yes, strongly","Mostly","Mixed with cultural messages","Mainly motivational, not biblical"],optsFr:["Oui, fortement","Surtout","Mélangé avec des messages culturels","Principalement motivationnel, pas biblique"]},
+    {q:"Are new converts properly followed up and discipled?",qFr:"Les nouveaux convertis sont-ils correctement suivis et disciples?",opts:["Yes, structured follow-up","Informally","Rarely","They are mostly left on their own"],optsFr:["Oui, suivi structuré","De façon informelle","Rarement","Ils sont surtout laissés seuls"]},
+    {q:"Is there a culture of prayer in your church?",qFr:"Y a-t-il une culture de prière dans votre église?",opts:["Yes, deeply embedded","Somewhat","Prayer is declining","We have services but little prayer"],optsFr:["Oui, profondément ancrée","Un peu","La prière décline","Nous avons des services mais peu de prière"]},
+    {q:"Are the youth actively invested in and mentored?",qFr:"Les jeunes sont-ils activement investis et mentorés?",opts:["Yes, significant investment","Somewhat","They are mostly entertained","They are largely neglected"],optsFr:["Oui, investissement significatif","Un peu","Ils sont surtout divertis","Ils sont largement négligés"]},
+    {q:"Is church leadership accountable and transparent?",qFr:"La direction de l'église est-elle responsable et transparente?",opts:["Yes, strong accountability","Mostly","Somewhat","Leadership is unaccountable"],optsFr:["Oui, forte responsabilité","Surtout","Un peu","La direction n'est pas responsable"]},
+    {q:"Is the church growing in spiritual depth, not just attendance?",qFr:"L'église grandit-elle en profondeur spirituelle, pas seulement en fréquentation?",opts:["Yes, deep growth","Attendance is growing but depth is weak","Steady in both","Declining in both"],optsFr:["Oui, croissance profonde","La fréquentation croît mais la profondeur est faible","Stable dans les deux","En déclin dans les deux"]},
+    {q:"Is evangelism and mission central to the church's activities?",qFr:"L'évangélisation et la mission sont-elles centrales aux activités de l'église?",opts:["Yes, strongly","Somewhat","Rarely","We've become inward-focused"],optsFr:["Oui, fortement","Un peu","Rarement","Nous sommes devenus tournés vers l'intérieur"]},
+    {q:"Are church members equipped to minister outside the four walls?",qFr:"Les membres de l'église sont-ils équipés pour servir en dehors des quatre murs?",opts:["Yes, we train for this","Somewhat","Not really","Church life stays inside the building"],optsFr:["Oui, nous nous entraînons pour ça","Un peu","Pas vraiment","La vie d'église reste dans le bâtiment"]},
+    {q:"Is financial integrity and transparency practiced?",qFr:"L'intégrité financière et la transparence sont-elles pratiquées?",opts:["Yes, full transparency","Mostly","Limited transparency","Finances are opaque"],optsFr:["Oui, transparence totale","Surtout","Transparence limitée","Les finances sont opaques"]},
+    {q:"Is unity evident among church members and leadership?",qFr:"L'unité est-elle évidente parmi les membres et la direction de l'église?",opts:["Yes, strong unity","Generally united","Some division","Significant division and factions"],optsFr:["Oui, forte unité","Généralement unis","Quelques divisions","Division et factions significatives"]},
+    {q:"Is holiness and righteousness taught and lived?",qFr:"La sainteté et la justice sont-elles enseignées et vécues?",opts:["Yes, it's central","It's taught but not lived","It's rarely mentioned","We avoid the topic"],optsFr:["Oui, c'est central","C'est enseigné mais pas vécu","C'est rarement mentionné","Nous éviter le sujet"]},
+    {q:"What is the most urgent need of your church?",qFr:"Quel est le besoin le plus urgent de votre église?",opts:["A revival of prayer and holiness","A clear discipleship strategy","Leadership renewal and alignment","Return to apostolic doctrine"],optsFr:["Un réveil de prière et de sainteté","Une stratégie de discipulat claire","Renouveau et alignement du leadership","Retour à la doctrine apostolique"]}
+  ],results:{high:{title:"Healthy Church — Guard and Grow",titleFr:"Église Saine — Gardez et Grandissez",summary:"Your church has strong foundations. Deepen your discipleship and expand your reach.",summaryFr:"Votre église a de solides fondements. Approfondissez votre discipulat et élargissez votre portée.",verse:'"From him the whole body, joined and held together by every supporting ligament, grows and builds itself up in love." — Ephesians 4:16',steps:["Document and strengthen your discipleship pathway","Invest significantly in raising the next generation of leaders","Expand your evangelism and community transformation efforts","Connect with other apostolic churches for mutual strengthening"]},mid:{title:"Promising but Needs Realignment",titleFr:"Prometteur mais Besoin de Réalignement",summary:"Your church has activity and heart, but needs a return to apostolic patterns.",summaryFr:"Votre église a de l'activité et du cœur, mais a besoin d'un retour aux modèles apostoliques.",verse:'"Yet I hold this against you: You have forsaken the love you had at first. Consider how far you have fallen! Repent and do the things you did at first." — Revelation 2:4-5',steps:["Call your leadership to a vision retreat and prayer","Begin building a formal discipleship pathway for all members","Address any division or accountability issues directly","Contact us for apostolic church-building resources"]},low:{title:"The Church Must Return to Its Roots",titleFr:"L'Église Doit Retourner à Ses Racines",summary:"Activity and programs alone cannot substitute for apostolic power and true discipleship.",summaryFr:"L'activité et les programmes seuls ne peuvent pas remplacer la puissance apostolique et le vrai discipulat.",verse:'"Unless the Lord builds the house, the builders labor in vain." — Psalm 127:1',steps:["Call a season of prayer and corporate repentance","Return to the apostolic pattern of Acts 2:42 as your church model","Seek mentorship and coaching for your church's restoration","Contact us — we are here to help churches find their way back"]}
+  }}
+};
+
+// ============================================================
+// QUIZ ENGINE
+// ============================================================
+let currentCategory = null;
+let currentQuestion = 0;
+let answers = [];
+let currentLang = 'en';
+
+function openAssessment(cat) {
+  currentCategory = cat;
+  document.getElementById('step-select').classList.remove('active');
+  document.getElementById('step-quiz').classList.add('active');
+  document.getElementById('step-result').classList.remove('active');
+  currentQuestion = 0;
+  answers = new Array(15).fill(null);
+  document.querySelector('#assessment').scrollIntoView({behavior:'smooth'});
+  setTimeout(loadQuestion, 400);
+}
+
+function startQuiz(cat) {
+  openAssessment(cat);
+}
+
+function loadQuestion() {
+  const data = quizData[currentCategory];
+  const q = data.questions[currentQuestion];
+  const total = data.questions.length;
+  document.getElementById('progressFill').style.width = `${((currentQuestion)/total)*100}%`;
+  document.getElementById('progressText').textContent = `${currentQuestion+1} / ${total}`;
+  const qText = currentLang === 'fr' && q.qFr ? q.qFr : q.q;
+  document.getElementById('quizQuestion').textContent = qText;
+  const opts = currentLang === 'fr' && q.optsFr ? q.optsFr : q.opts;
+  const container = document.getElementById('quizOptions');
+  container.innerHTML = '';
+  opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-option' + (answers[currentQuestion] === i ? ' selected' : '');
+    btn.textContent = opt;
+    btn.onclick = () => selectOption(i);
+    container.appendChild(btn);
+  });
+  document.getElementById('btnPrev').style.visibility = currentQuestion === 0 ? 'hidden' : 'visible';
+  const isLast = currentQuestion === total - 1;
+  const nextBtn = document.getElementById('btnNext');
+  if (currentLang === 'fr') {
+    nextBtn.textContent = isLast ? 'Voir les Résultats →' : 'Suivant →';
+  } else {
+    nextBtn.textContent = isLast ? 'See Results →' : 'Next →';
+  }
+}
+
+function selectOption(i) {
+  answers[currentQuestion] = i;
+  document.querySelectorAll('.quiz-option').forEach((btn, idx) => {
+    btn.classList.toggle('selected', idx === i);
+  });
+}
+
+function nextQuestion() {
+  const data = quizData[currentCategory];
+  if (answers[currentQuestion] === null) {
+    answers[currentQuestion] = 0;
+  }
+  if (currentQuestion < data.questions.length - 1) {
+    currentQuestion++;
+    loadQuestion();
+  } else {
+    showResults();
+  }
+}
+
+function prevQuestion() {
+  if (currentQuestion > 0) {
+    currentQuestion--;
+    loadQuestion();
+  }
+}
+
+function showResults() {
+  const data = quizData[currentCategory];
+  const total = answers.reduce((sum, a) => sum + (a !== null ? a : 0), 0);
+  const maxScore = data.questions.length * 3;
+  const pct = Math.round(((maxScore - total) / maxScore) * 100);
+  let tier = pct >= 70 ? 'high' : pct >= 40 ? 'mid' : 'low';
+  const res = data.results[tier];
+  document.getElementById('resultScore').textContent = pct + '%';
+  document.getElementById('resultTitle').textContent = currentLang === 'fr' && res.titleFr ? res.titleFr : res.title;
+  document.getElementById('resultSummary').textContent = currentLang === 'fr' && res.summaryFr ? res.summaryFr : res.summary;
+  document.getElementById('resultVerse').textContent = res.verse;
+  const stepsList = document.getElementById('resultSteps');
+  stepsList.innerHTML = '';
+  res.steps.forEach(step => {
+    const li = document.createElement('li');
+    li.textContent = step;
+    stepsList.appendChild(li);
+  });
+  document.getElementById('step-quiz').classList.remove('active');
+  document.getElementById('step-result').classList.add('active');
+  document.getElementById('step-result').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function resetQuiz() {
+  currentCategory = null;
+  currentQuestion = 0;
+  answers = [];
+  document.getElementById('step-result').classList.remove('active');
+  document.getElementById('step-quiz').classList.remove('active');
+  document.getElementById('step-select').classList.add('active');
+}
+
+// ============================================================
+// LANGUAGE TOGGLE
+// ============================================================
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'fr' : 'en';
+  const btn = document.querySelector('.lang-toggle');
+  btn.textContent = currentLang === 'en' ? '🇫🇷 Français' : '🇬🇧 English';
+  document.querySelectorAll('[data-en]').forEach(el => {
+    el.textContent = currentLang === 'fr' ? (el.dataset.fr || el.dataset.en) : el.dataset.en;
+  });
+  document.documentElement.lang = currentLang;
+  if (currentCategory) loadQuestion();
+}
+
+// ============================================================
+// NAV
+// ============================================================
+function toggleMobile() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobile() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// ============================================================
+// SCROLL REVEAL
+// ============================================================
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, {threshold: 0.1});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ============================================================
+// SCROLL TOP
+// ============================================================
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('scrollTop');
+  btn.classList.toggle('visible', window.scrollY > 500);
+});
+</script>
+</body>
+</html>
